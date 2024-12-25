@@ -129,10 +129,7 @@ Let's finish assembling the mouse. Follow the pictures below. The screw threads 
 
 ## Sanity Check
 
-Now that your mouse is assembled, it is time to run a sanity check to make sure everything is working.
-
-1. Follow the [setup](../README.md) instructions to get the firmware and libraries uploaded.
-2. Follow the [sanity lab](sanity.md) to run the sanity check.
+Now that your mouse is assembled, it is time to make sure everything is working by running a [sanity check](sanity.md).
 
 ## IR Calibration
 
