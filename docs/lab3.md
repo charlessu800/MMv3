@@ -25,7 +25,7 @@ import board
 import time
 import digitalio
 
-# left encoder
+# a and b Hall effect sensors of left encoder
 a = digitalio.DigitalInOut(board.GP12)
 b = digitalio.DigitalInOut(board.GP13)
 
@@ -50,7 +50,7 @@ Next let's try tracking the position of the left wheel. We're going to use a tec
 import board
 import digitalio
 
-# left encoder
+# a and b Hall effect sensors of left encoder
 a = digitalio.DigitalInOut(board.GP12)
 b = digitalio.DigitalInOut(board.GP13)
 
@@ -60,11 +60,11 @@ a_prev = a.value
 
 def leftEncoderRisingEdge():
     global position # access global position
-    """TODO increment or decrement position"""
+    """TODO increment or decrement position depending on which way the motor is spinning"""
 
 while True:
     a_val = a.value
-    if a_val and not a_prev: # rising edge
+    if a_val and not a_prev: # rising edge of a
         leftEncoderRisingEdge()
     a_prev = a_val
 
