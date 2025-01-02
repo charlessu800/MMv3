@@ -15,28 +15,28 @@ l_en.direction = digitalio.Direction.OUTPUT
 l_en.value = False
 l_adc = AnalogIn(board.GP28)
 
-l_a   = digitalio.DigitalInOut(board.GP5)
-l_a.direction  = digitalio.Direction.OUTPUT
-l_a.drive_mode = digitalio.DriveMode.OPEN_DRAIN
-l_a.value = True # high Z mode
+lir_a   = digitalio.DigitalInOut(board.GP5)
+lir_a.direction  = digitalio.Direction.OUTPUT
+lir_a.drive_mode = digitalio.DriveMode.OPEN_DRAIN
+lir_a.value = True # high Z mode
 
-l_b   = digitalio.DigitalInOut(board.GP6)
-l_b.direction  = digitalio.Direction.OUTPUT
-l_b.drive_mode = digitalio.DriveMode.OPEN_DRAIN
-l_b.value = True # high Z mode
+lir_b   = digitalio.DigitalInOut(board.GP6)
+lir_b.direction  = digitalio.Direction.OUTPUT
+lir_b.drive_mode = digitalio.DriveMode.OPEN_DRAIN
+lir_b.value = True # high Z mode
 
 while True:
     l_en.value = True
 
-    l_a.value = False
+    lir_a.value = False
     time.sleep(0.001)
     print(l_adc.value, end=" ")
-    l_a.value = True
+    lir_a.value = True
 
-    l_b.value = False
+    lir_b.value = False
     time.sleep(0.001)
     print(l_adc.value)
-    l_b.value = True
+    lir_b.value = True
 
     l_en.value = False
 
