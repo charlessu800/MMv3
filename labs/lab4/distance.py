@@ -49,6 +49,12 @@ dist = Distance(ir,
     0.0258, -50.5, 0.0292, -54.0,
 )
 
+"""Make Sure to allign the constants in the right place:
+        la_a, la_b, lb_a, lb_b,
+        ca_a, ca_b, cb_a, cb_b,
+        ra_a, ra_b, rb_a, rb_b,
+"""
+
 if __name__ == "__main__":
     while True:
         dist.scan()
