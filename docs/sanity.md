@@ -4,7 +4,7 @@ This lab provides code to test all aspects of your mouse and identify any hardwa
 
 1. Plug mouse into your computer and upload the latest **firmware.uf2** (see [releases](https://adafruit-circuit-python.s3.amazonaws.com/bin/raspberry_pi_pico/en_US/adafruit-circuitpython-raspberry_pi_pico-en_US-8.2.0.uf2) by dragging the file into the `RPI-RP2` folder that shows up. It should disappear and reappear as a `CIRCUITPY` folder.
     * If you've uploaded firmware before, you'll need to hold the `BOOTSEL` button on the Pi Pico while plugging in.
-2. Download the latest CircuitPython [libraries](https://circuitpython.org/libraries) (Bundle for Version 7.x) and upload the following ones to the lib/ folder on your mouse.
+2. Download the latest CircuitPython [libraries](https://circuitpython.org/libraries) (Bundle for Version 8.x or 7.x, 9.x is untried !) unzip the file and upload the following folders and files to the lib/ folder on your mouse.
     * adafruit_motor/
     * adafruit_onewire/
     * neopixel.mpy
@@ -30,7 +30,7 @@ This lab provides code to test all aspects of your mouse and identify any hardwa
     </details>
 5. Bring up a serial monitor on that serial port (baud rate doesn't matter). There are many options of software to use, but the following are what I personally use.
     * **Windows** - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-    * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) and [screen](https://en.wikipedia.org/wiki/GNU_Screen) after running ls /dev/tty.* youre going to do type into your terminal screen "whatever you identified as the correct port"
+    * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) and [screen](https://en.wikipedia.org/wiki/GNU_Screen) after running ls /dev/tty.* youre going to type into your terminal -> screen "whatever you identified as the correct port". If this doesn't work, its a bit finiky, open up serialTools to the terminal tab change your serial port to the usb you identified and press the connect button on the right hand side. After, press disconnect and do the terminal instructions again. :wq
     * **Linux** - [screen](https://en.wikipedia.org/wiki/GNU_Screen)
 6. Follow the instructions printed to the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
     * IR sensor readings should be around 30,000-60,000 without a surface in front of them and under 5,000 with your hand right in front of them.
