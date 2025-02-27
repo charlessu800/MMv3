@@ -30,7 +30,7 @@ This lab provides code to test all aspects of your mouse and identify any hardwa
     </details>
 5. Bring up a serial monitor on that serial port (baud rate doesn't matter). There are many options of software to use, but the following are what I personally use.
     * **Windows** - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-    * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) and [screen](https://en.wikipedia.org/wiki/GNU_Screen)
+    * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) and [screen](https://en.wikipedia.org/wiki/GNU_Screen) after running ls /dev/tty.* youre going to do type into your terminal screen "whatever you identified as the correct port"
     * **Linux** - [screen](https://en.wikipedia.org/wiki/GNU_Screen)
 6. Follow the instructions printed to the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
     * IR sensor readings should be around 30,000-60,000 without a surface in front of them and under 5,000 with your hand right in front of them.
