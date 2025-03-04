@@ -1,4 +1,4 @@
-# Lab 3: IR Sensors
+# Lab 4: IR Sensors
 
 ## Background
 
