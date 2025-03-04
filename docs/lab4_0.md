@@ -1,5 +1,5 @@
 # Lab 4: IR Sensors
-
+Note to staff: we changed the order
 ## Background
 
 IR sensors work by sending out IR light and measuring the amount reflected back. They take a lot more work to calibrate and are surface dependent, but are far cheaper and faster than the ToF sensors we used to use. Our mouse has 6 of these sensors split into 3 pairs (center/front, left, right). Having 2 sensors per side allows us to statically determine both the distance and angle of the nearest surface.
