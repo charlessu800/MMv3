@@ -44,7 +44,7 @@ Pull up a serial monitor and start spinning the left motor at various speeds. No
 
 ## Polling
 
-Next let's try tracking the position of the left wheel. We're going to use a technique called polling which involves repeatedly reading a signal to detect changes. Fill in the `leftEncoderRisingEdge` function below.
+Next let's try tracking the position of the left wheel. We're going to use a technique called polling which involves repeatedly reading a signal to detect changes. Fill in the `leftEncoderRisingEdge` function below. When would we want to detect rising edges? For which channel? Refer to the (slides)[https://docs.google.com/presentation/d/1K-QloCbwE4FLP0DOvIL4pT_rOTX5n5soy-6r5Pd3Yes/edit#slide=id.g1701337f6a4_0_1266] Think about how the output looked like in the sanity lab we did! We want a similar process here. Your solution can be one line with python syntactic sugar :) 
 
 ```python
 import board
@@ -61,6 +61,7 @@ a_prev = a.value
 def leftEncoderRisingEdge():
     global position # access global position
     """TODO increment or decrement position depending on which way the motor is spinning"""
+    // Try experimenting with the instance variables of a and b (we only need either a or b). Refer to the             // waveform code from earlier for an idea, think about rising edges
 
 while True:
     a_val = a.value
