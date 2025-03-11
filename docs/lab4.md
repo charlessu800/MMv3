@@ -18,7 +18,7 @@ To convert that to a readable voltage signal, we'll use a setup similar to a res
 
 ## Read One Sensor
 
-Since we have 6 total analog sensors but only 3 ADC pins on the Pi Pico, we need to multiplex 2 sensors onto each pin. We use one extra pin on each IR detector in open-drain mode to fully disconnect or connect it to ground. To read in one sensor, we perform the following steps.
+Since we have 6 total analog sensors but only 3 ADC pins on the Pi Pico, we need to multiplex 2 sensors onto each pin. We use one extra pin on each IR detector in open-drain mode to fully disconnect or connect it to ground. To read in one sensor, we perform the following steps in the while loop.
 
 1. Enable the IR emitters (set pin to `True`).
 2. Enable the chosen sensor by connecting it to ground (set pin to `False`).
@@ -35,10 +35,10 @@ import time
 import digitalio
 from analogio import AnalogIn
 
-# adc
-l_adc = """TODO create AnalogIn on GP28"""
+# adc 
+l_adc = """TODO call AnalogIn on GP28"""
 
-# emitter
+# emitter 
 l_en = """TODO create DigitalInOut output on GP7"""
 l_en.direction = digitalio.Direction.OUTPUT
 l_en.value = False
@@ -52,12 +52,18 @@ lir_a.value = True # high Z mode
 lir_b = """TODO create DigitalInOut on GP6 in open-drain mode, use lir_a as direct inspiration"""
 
 while True:
-    # TODO enable IR emitters using l_en
-    # TODO enable chosen sensor lir_a or lir_b
-    # TODO wait a bit, 1ms should do
-    # TODO take analog reading for future printing
-    # TODO disable chosen sensor lir_a or lir_b
-    # TODO disable IR emitters using l_en
+    # TODO enable IR emitters using l_en set one of its variables to a (boolean)
+
+    # TODO enable chosen sensor lir_a or lir_b by setting one of its variable to false
+    # TODO wait a bit, 1ms should do time. ...
+    # TODO take analog reading for future printing print(l_adc. , end="")
+    # TODO disable chosen sensor lir_a or lir_b 
+
+    # TODO enable chosen sensor
+    #
+    # Repeat above for this sensor
+    #
+    # TODO disable IR emitters using l_en 
     time.sleep(0.05)
 ```
 
@@ -83,7 +89,7 @@ ir = IRSensors(
 )
 
 while True:
-    """TODO get and print all sensor readings"""
+    """TODO get and print all sensor readings, use last part to help! :)"""
     time.sleep(0.05)
 ```
 
