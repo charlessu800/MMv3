@@ -44,7 +44,7 @@ Pull up a serial monitor and start spinning the left motor at various speeds. No
 
 ## Polling
 
-Next let's try tracking the position of the left wheel. We're going to use a technique called polling which involves repeatedly reading a signal to detect changes. Fill in the `leftEncoderRisingEdge` function below. When would we want to detect rising edges? For which channel? Refer to the (slides)[https://docs.google.com/presentation/d/1K-QloCbwE4FLP0DOvIL4pT_rOTX5n5soy-6r5Pd3Yes/edit#slide=id.g1701337f6a4_0_1266] Think about how the output looked like in the sanity lab we did! We want a similar process here. Your solution can be one line with python syntactic sugar :) 
+Next let's try tracking the position of the left wheel. We're going to use a technique called polling which involves repeatedly reading a signal to detect changes. Fill in the `leftEncoderRisingEdge` function below. When would we want to detect rising edges? For which channel? Refer to the [slides](https://docs.google.com/presentation/d/1K-QloCbwE4FLP0DOvIL4pT_rOTX5n5soy-6r5Pd3Yes/edit#slide=id.g1701337f6a4_0_1266) Think about how the output looked like in the sanity lab we did! We want a similar process here. Your solution can be one line with python syntactic sugar :) 
 
 ```python
 import board
