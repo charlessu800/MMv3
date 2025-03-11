@@ -2,6 +2,7 @@
 
 ## Background
 
+You'll need your code from lab five here!!
 You may have noticed that if you let your mouse drive forward for long enough, it'll start drifting to one side. That's because we're just using open-loop control where we apply some input and hope we get the desired output. For various reasons, including but not limited to the following, our mouse will not drive straight even given the same power to both motors.
 
 * The mouse isn't perfectly balanced as all things should be.
