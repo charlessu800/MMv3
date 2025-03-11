@@ -116,4 +116,4 @@ Load up [`code.py`](../labs/lab4/code.py) which contains code to automate findin
 ### Checkoff #3
 
 1. Run the calibration code and save the constants somewhere.
-2. Using the constants, write code to convert sensor values to distances.
+2. Using the constants, write code to convert sensor values to distances. (Use the existing code.py, just append it to the end inside)
