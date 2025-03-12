@@ -2,7 +2,7 @@
 
 ## Background
 
-Originally, this entire lab consisted of two labs total: IR sensing and Encoders. Nowadays we've merged them into two for your enjoyment and hopefully ease-of-learning. We're gonna start with encoders and then move to IR sensors.
+Originally, this entire lab consisted of two labs total: IR sensing and Encoders. Now we've merged them into two for your enjoyment and hopefully ease-of-learning. We're gonna start with encoders and then move to IR sensors.
 # Encoders 
 ## Background
 
