@@ -64,7 +64,9 @@ a_prev = a.value
 
 def leftEncoderRisingEdge():
     global position # access global position
-    """TODO increment or decrement position depending on which way the motor is spinning"""
+    """TODO increment or decrement position depending on which way the motor is spinning
+    Try experimenting with the instance variables of a and b (we only need either a or b). Refer to the
+    waveform code from earlier for an idea, think about rising edges"""
 
 while True:
     a_val = a.value
