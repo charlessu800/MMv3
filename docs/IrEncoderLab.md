@@ -168,11 +168,17 @@ lir_a.value = True # high Z mode
 lir_b = """TODO create DigitalInOut on GP6 in open-drain mode, use lir_a as direct inspiration"""
 
 while True:
-    # TODO enable IR emitters using l_en
-    # TODO enable chosen sensor lir_a or lir_b
-    # TODO wait a bit, 1ms should do
-    # TODO take analog reading for future printing
-    # TODO disable chosen sensor lir_a or lir_b
+    # TODO enable IR emitters using l_en set one of its variables to a (boolean)
+
+    # TODO enable chosen sensor lir_a or lir_b by setting one of its variable to false
+    # TODO wait a bit, 1ms should do time. ...
+    # TODO take analog reading for future printing print(l_adc. , end="")
+    # TODO disable chosen sensor lir_a or lir_b 
+
+    # TODO enable chosen sensor
+    #
+    # Repeat above for this sensor
+    #
     # TODO disable IR emitters using l_en
     time.sleep(0.05)
 ```
