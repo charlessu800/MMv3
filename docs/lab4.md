@@ -109,13 +109,36 @@ Let's try estimating actual distances from the sensor values. Empirically, the r
     <a><b>IR Sensor Linear Region</b></a>
 </p>
 
-Load up [`code.py`](../labs/lab4/code.py) which contains code to automate finding the constants. You'll be using a maze wall and ruler to take readings at various distances. The code then uses least squares to fit a line to the points and prints out the constants at the end. The equation using these constants to convert sensor readings to distances can be expressed as follows.
+To save you some time, we're also going to include code for you to get proper distance readings: [`distance.py`](../labs/lab4/distance.py). 
+Pay attention to this area specifically: 
 
-<p align="center">
-    $distance = a \cdot sensor + b$
-</p>
+```python
+# IR sensors
+ir = IRSensors(
+    board.GP7,  board.GP5,  board.GP6,  board.GP28, # left
+    board.GP9,  board.GP10, board.GP11, board.GP26, # center
+    board.GP21, board.GP20, board.GP22, board.GP27, # right
+    avg = 10
+)
+
+""" Main """
+
+dist = Distance(ir,
+    0.0299, -63.6, 0.0195, -39.1,
+    0.0300, -60.4, 0.0251, -47.9,
+    0.0258, -50.5, 0.0292, -54.0,
+)
+
+"""Make Sure to allign the constants in the right place:
+        la_a, la_b, lb_a, lb_b,
+        ca_a, ca_b, cb_a, cb_b,
+        ra_a, ra_b, rb_a, rb_b,
+"""
+```
+
+Within the file we make an instance of the Distance class and passing in the arguments for the __a__ and __b__ constants. The numbers given out are placeholders and you should use the constants you got from the previous section and fill them in appropriately. 
 
 ### Checkoff #3
 
 1. Run the calibration code and save the constants somewhere.
-2. Using the constants, write code to convert sensor values to distances. (Use the existing code.py, just append it to the end inside)
+2. Using the constants, fill in the distance code and check that it runs correctly.
