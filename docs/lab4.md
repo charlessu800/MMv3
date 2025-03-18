@@ -73,7 +73,7 @@ while True:
 
 ## Read All the Sensors
 
-In order to simplify the whole process of multiplexing and reading from multiple sensors, we wrote a library. Upload `irsensor.py` from [sanity/](../labs/sanity) to serve as the library. Read through `irsensor.py` to instantiate and use it and fill out the below TODOs to print out all sensor readings in real time.
+In order to simplify the whole process of multiplexing and reading from multiple sensors, we wrote a library. Upload `irsensor.py` from [sanity/](../labs/sanity) if you havent already, to serve as the library. Read through `irsensor.py` to instantiate and use it and fill out the below TODOs to print out all sensor readings in real time.
 
 ```python
 import board
@@ -82,14 +82,16 @@ import time
 from irsensor import IRSensors
 
 ir = IRSensors(
-    """TODO sensor | en   | a    | b    | adc"""
-    """TODO lir    | GP7  | GP5  | GP6  | GP28"""
-    """TODO cir    | GP9  | GP10 | GP11 | GP26"""
-    """TODO rir    | GP21 | GP20 | GP22 | GP27"""
+    board.GP7,  board.GP5,  board.GP6,  board.GP28, # left
+    board.GP9,  board.GP10, board.GP11, board.GP26, # center
+    board.GP21, board.GP20, board.GP22, board.GP27  # right
 )
 
 while True:
-    """TODO get and print all sensor readings, use last part to help! :)"""
+    ir.scan()
+    print("lir_a:", ir.lir_a, "\t", "lir_b:", ir.lir_b, "\t",
+            "cir_a:", ir.cir_a, "\t", "cir_b:", ir.cir_b, "\t",
+            "rir_a:", ir.rir_a, "\t", "rir_b:", ir.rir_b)
     time.sleep(0.05)
 ```
 
