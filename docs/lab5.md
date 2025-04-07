@@ -113,7 +113,7 @@ while True:
 
 ## Motor Control w/ Library
 
-Having to deal with PWM outputs and duty cycles can get tedious. As is usually the case, CircuitPython provides a nice library named `motor` for this very thing. Read the [documentation](https://circuitpython.readthedocs.io/projects/motor/en/latest/api.html) and fill out the TODOs in the following code.
+Having to deal with PWM outputs and duty cycles can get tedious. As is usually the case, CircuitPython provides a nice library named `motor` for this very thing. Read the [documentation](https://circuitpython.readthedocs.io/projects/motor/en/latest/api.html) and fill out the TODOs in the following code. If you are having trouble refer to the code in sanity for a nice helpful guide!
 
 ```python
 import board
