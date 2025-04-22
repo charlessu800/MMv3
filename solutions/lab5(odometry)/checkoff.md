@@ -82,3 +82,24 @@ while True:
 ```
 
 2. It throws an error. Let them know that means we need to keep values within the valid range for future labs.
+
+Wanna make your mouse turn?
+
+```python
+import board
+import pwmio
+
+lmot_in1 = pwmio.PWMOut(board.GP16, frequency=20000)
+lmot_in2 = pwmio.PWMOut(board.GP17, frequency=20000)
+
+rmot_in1 = pwmio.PWMOut(board.GP15, frequency=20000)
+rmot_in2 = pwmio.PWMOut(board.GP14, frequency=20000)
+
+
+while True:
+    lmot_in1.duty_cycle = 49151
+    lmot_in2.duty_cycle = 65535
+
+    rmot_in1.duty_cycle = 65535 
+    rmot_in2.duty_cycle = 49151
+```
