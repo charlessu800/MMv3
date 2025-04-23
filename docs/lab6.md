@@ -31,6 +31,32 @@ Your job is to apply P control to make the mouse drive straight. The linear velo
 
 When implementing the P controller, start with $K_p$ values of around 0.1 and tune up and down from there based on performance. To make sure the mouse does move forward, add 0.2 to the `throttle` for each motor in addition to your correction term.
 
+``` python
+...
+def constrain(val):
+    return min(1, max(val, -1))
+
+while True:
+    # Calculate the left distance value
+    # Calculate the right distance value
+
+    # Get both theta adn distance from lab 
+
+    # set Kp
+    # What is out theta target? define it.
+
+    # whats the error of our target and the theta?
+
+    # define a steering correction, (hint: it should be the product of our Kp and error.)
+    u_ang = Kp_ang * e_ang
+
+    # set the throttles of the left/right motor to be constrained to 0.2 plus or minus our steering correct depending on the motor
+
+    print(e_ang)
+
+    time.sleep(0.05)
+```
+
 ### Checkoff #1
 
 1. Demonstrate your working P controller. Print out your error term too.
