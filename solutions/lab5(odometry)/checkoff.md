@@ -83,7 +83,7 @@ while True:
 
 2. It throws an error. Let them know that means we need to keep values within the valid range for future labs.
 
-Wanna make your mouse turn?
+Wanna make your mouse turn? If you want to run this without being connected remember to include the main statement!
 
 ```python
 import board
