@@ -47,7 +47,7 @@ while True:
 
     # whats the error of our target and the theta?
 
-    # define a steering correction, (hint: it should be the product of our Kp and error.)
+    # define the steering correction, Why should it should be the product of our Kp and angular error?
     u_ang = Kp_ang * e_ang
 
     # set the throttles of the left/right motor to be constrained to 0.2 plus or minus our steering correct depending on the motor
