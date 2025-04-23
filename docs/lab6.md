@@ -43,7 +43,7 @@ while True:
     # Get both theta adn distance from lab 
 
     # set Kp
-    # What is out theta target? define it.
+    # What is our theta target? define it.
 
     # whats the error of our target and the theta?
 
