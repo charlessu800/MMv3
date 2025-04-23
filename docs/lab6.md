@@ -71,7 +71,7 @@ When solving mazes, it is quite useful to be able to drive forward a set distanc
 * What is the error for traveling a set distance?
 * Given an error, how do you change each motor's power to correct for it?
 
-When implementing the P controller, start with $K_p$ values of 0.1 and tune. Don't remove your angular correction code from before since we still want to drive straight. Since we want to leave a little wiggle room for the angular correction, limit the linear correction term to around 0.9.
+When implementing the P controller, start with $K_p$ values of 0.1 and tune. Don't remove your angular correction code from before since we still want to drive straight. Since we want to leave a little wiggle room for the angular correction, limit the linear correction term to around 0.3.
 
 ```python
 def constrain(val, min_val, max_val):
