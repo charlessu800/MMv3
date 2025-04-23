@@ -73,6 +73,44 @@ When solving mazes, it is quite useful to be able to drive forward a set distanc
 
 When implementing the P controller, start with $K_p$ values of 0.1 and tune. Don't remove your angular correction code from before since we still want to drive straight. Since we want to leave a little wiggle room for the angular correction, limit the linear correction term to around 0.9.
 
+```python
+def constrain(val, min_val, max_val):
+    return min(max_val, max(val, min_val))
+
+if __name__ == "__main__":
+    MM_PER_TICK = ...
+
+    while True:
+        left_dist  = ...
+        right_dist = ...
+
+        dist  = ...
+        theta = ...
+
+        # angular P control
+        Kp_ang = ...
+        theta_target = ...
+
+        e_ang = ...
+        u_ang = ...
+
+        # linear P control
+        Kp_lin = ...
+        dist_target = ...
+
+        # linear error?
+        e_lin = ...
+        u_lin = constrain(..., -0.3, 0.3)
+
+        # combine
+        lmot.throttle = constrain(u_lin - u_ang, -1, 1)
+        rmot.throttle = constrain(u_lin + u_ang, -1, 1)
+
+        print(e_ang, e_lin)
+
+        time.sleep(0.05)
+```
+
 ### Checkoff #2
 
 1. Demonstrate your working P controller. Print out your error term too.
