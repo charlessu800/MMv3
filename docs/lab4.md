@@ -76,7 +76,7 @@ while True:
 
 ## Read All the Sensors
 
-In order to simplify the whole process of multiplexing and reading from multiple sensors, we wrote a library. Upload, if you havent already `irsensor.py` from [sanity/](../labs/sanity), to serve as the library. Read through `irsensor.py` to instantiate and use it to understand the parameters of IRSensors.
+In order to simplify the whole process of multiplexing and reading from multiple sensors, we wrote a library. Upload, if you havent already `irsensor.py` from [sanity/](../labs/sanity), to serve as the library. Read through `irsensor.py` to instantiate and use it to understand the parameters of IRSensors. You can paste this over your prior code.py.
 
 ```python
 import board
