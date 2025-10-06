@@ -36,7 +36,7 @@ import digitalio
 from analogio import AnalogIn
 
 # adc 
-l_adc = """TODO call AnalogIn on GP28"""
+l_adc = """TODO call AnalogIn on board.GP28"""
 
 # emitter 
 l_en = """TODO create DigitalInOut output on GP7"""
