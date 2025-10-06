@@ -50,6 +50,8 @@ while True:
 
 ## Checkoff #2
 
+In order to simplify the whole process of multiplexing and reading from multiple sensors, we wrote a library. Upload, if you havent already irsensor.py from sanity/, to serve as the library. Read through irsensor.py to instantiate and use it to understand the parameters of IRSensors.
+
 1. Verify all sensors are in working order
 
 ## Checkoff #3
