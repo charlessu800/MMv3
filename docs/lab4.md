@@ -137,6 +137,8 @@ ir = IRSensors(
 
 """ Main """
 
+
+''' Please ensure you change these to your own, these are for another mouse'''
 dist = Distance(ir,
     0.0299, -63.6, 0.0195, -39.1,
     0.0300, -60.4, 0.0251, -47.9,
