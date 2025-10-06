@@ -10,10 +10,12 @@ import time
 import digitalio
 from analogio import AnalogIn
 
+l_adc = AnalogIn(board.GP28)
+
 l_en  = digitalio.DigitalInOut(board.GP7)
 l_en.direction = digitalio.Direction.OUTPUT
 l_en.value = False
-l_adc = AnalogIn(board.GP28)
+
 
 lir_a   = digitalio.DigitalInOut(board.GP5)
 lir_a.direction  = digitalio.Direction.OUTPUT
