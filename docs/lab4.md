@@ -112,7 +112,7 @@ Let's try estimating actual distances from the sensor values. Empirically, the r
     <a><b>IR Sensor Linear Region</b></a>
 </p>
 
-Load up [`constants.py`](../labs/lab4/constants.py) which contains code to automate finding the constants. You'll be using a maze wall and ruler to take readings at various distances. The code then uses least squares to fit a line to the points and prints out the constants at the end. The equation using these constants to convert sensor readings to distances can be expressed as follows.
+Load up [`code.py`](../labs/lab4/code.py) which contains code to automate finding the constants. You'll be using a maze wall and ruler to take readings at various distances. The code then uses least squares to fit a line to the points and prints out the constants at the end. The equation using these constants to convert sensor readings to distances can be expressed as follows.
 
 <p align="center">
     $distance = a \cdot sensor + b$
