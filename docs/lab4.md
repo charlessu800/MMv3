@@ -74,7 +74,7 @@ while True:
 1. Demonstrate one working sensor.
 
 ### Summary 
-You should have now read from your lir_a and lir_b sensors and have printed to your screen their values. Fun fact a pixel takes longer to be displayed to your screen than it does to send a byte from LA to NYC!
+You should have now read from your lir_a and lir_b sensors and have printed to your screen their values. Fun fact the time it takes for a pixel to be displayed to your screen is longer than the time it takes to send a byte from LA to NYC!
 
 ## Read All the Sensors
 
