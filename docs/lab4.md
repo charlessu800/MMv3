@@ -36,7 +36,7 @@ import digitalio
 from analogio import AnalogIn
 
 # adc 
-l_adc = """TODO call AnalogIn on board.GP28"""
+l_adc = """TODO call AnalogIn on GP28"""
 
 # emitter 
 l_en = """TODO create DigitalInOut output on GP7"""
@@ -50,6 +50,9 @@ lir_a.drive_mode = digitalio.DriveMode.OPEN_DRAIN
 lir_a.value = True # high Z mode
 
 lir_b = """TODO create DigitalInOut on GP6 in open-drain mode, use lir_a as direct inspiration"""
+lir_b.direction  = ...
+lir_b.drive_mode = ...
+lir_b.value = ...
 
 while True:
     # TODO enable IR emitters using l_en set one of its variables to a (boolean)
