@@ -104,7 +104,7 @@ while True:
 
 ## Calibration
 
-Let's try estimating actual distances from the sensor values. Empirically, the relationship is linear below around 60mm and rises sharply beyond that due to the angled sensors seeing above the wall. Based on maze cell size, we really only need accurate distances around 50mm for wall following and just binary wall detection beyond that.
+Let's try estimating actual distances from the sensor values. Empirically, the relationship is linear below around 60mm and rises sharply beyond that due to the angled sensors seeing above the wall. Based on maze cell size, we really only need accurate distances around 50mm (~2in) for wall following and just binary wall detection beyond that.
 
 <p align="center">
     <img height="250px" src="imgs/ir_graph.png"/>
