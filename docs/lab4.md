@@ -59,13 +59,12 @@ while True:
 
     # TODO enable chosen sensor lir_a or lir_b by setting one of its variable to false
     # TODO wait a bit, 1ms should do time. ...
-    # TODO take analog reading for future printing print(l_adc. , end="")
+    # TODO take analog reading for future printing print(l_adc. , end=" ")
     # TODO disable chosen sensor lir_a or lir_b 
 
-    # TODO enable chosen sensor
-    #
+    # TODO try for lir_b or lir_a whichever one you didnt use instead, enable chosen sensor etc
     # Repeat above for this sensor
-    #
+
     # TODO disable IR emitters using l_en 
     time.sleep(0.05)
 ```
@@ -73,6 +72,9 @@ while True:
 ### Checkoff #1
 
 1. Demonstrate one working sensor.
+
+### Summary 
+You should have now read from your lir_a and lir_b sensors and have printed to your screen their values. Fun fact a pixel takes longer to be displayed to your screen than it does to send a byte from LA to NYC!
 
 ## Read All the Sensors
 
@@ -101,6 +103,9 @@ while True:
 ### Checkoff #2
 
 1. Demonstrate all of your working sensors.
+
+### Summary
+This should appear similar to what you saw from sanity :)
 
 ## Calibration
 
