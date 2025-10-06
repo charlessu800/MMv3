@@ -29,7 +29,7 @@ This lab provides code to test all aspects of your mouse and identify any hardwa
 
     </details>
 5. Bring up a serial monitor on that serial port (baud rate doesn't matter). There are many options of software to use, but the following are what I personally use.
-    * **Windows** - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+    * **Windows** - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) Open up putty -> Serial -> Enter COM[X] -> Run
     * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) and [screen](https://en.wikipedia.org/wiki/GNU_Screen) after running ls /dev/tty.* youre going to type into your terminal -> screen "whatever you identified as the correct port". If this doesn't work, its a bit finiky, open up serialTools to the terminal tab change your serial port to the usb you identified and press the connect button on the right hand side. After, press disconnect and do the terminal instructions again.
     * **Linux** - [screen](https://en.wikipedia.org/wiki/GNU_Screen)
 6. Follow the instructions printed to the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
