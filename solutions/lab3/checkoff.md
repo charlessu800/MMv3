@@ -10,18 +10,21 @@ import time
 import digitalio
 from analogio import AnalogIn
 
+# adc
 l_adc = AnalogIn(board.GP28)
 
+#emitter 
 l_en  = digitalio.DigitalInOut(board.GP7)
 l_en.direction = digitalio.Direction.OUTPUT
 l_en.value = False
 
-
+# sensors
 lir_a   = digitalio.DigitalInOut(board.GP5)
 lir_a.direction  = digitalio.Direction.OUTPUT
 lir_a.drive_mode = digitalio.DriveMode.OPEN_DRAIN
 lir_a.value = True # high Z mode
 
+# STUDENT DO THIS
 lir_b   = digitalio.DigitalInOut(board.GP6)
 lir_b.direction  = digitalio.Direction.OUTPUT
 lir_b.drive_mode = digitalio.DriveMode.OPEN_DRAIN
