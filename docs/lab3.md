@@ -63,7 +63,7 @@ def leftEncoderRisingEdge():
     Try experimenting with the instance variables of a and b (we only need either a or b). Refer to the
     waveform code from earlier for an idea, think about rising edges"""
     global position # access global position
-    if b.value == ... :
+    if b.value == ... : # can be simplified lol
         position += ...
     else:
         ...
