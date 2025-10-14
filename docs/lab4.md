@@ -27,7 +27,7 @@ Since we have 6 total analog sensors but only 3 ADC pins on the Pi Pico, we need
 5. Disable the chosen sensor by setting the pin to open-drain (set pin to `True`).
 6. Disable the IR emitters (set pin to `False`).
 
-Baesd on the above steps and the `AnalogIn` [documentation](https://circuitpython.readthedocs.io/en/latest/shared-bindings/analogio/index.html), fill out the below TODOs to print out readings from the left IR sensor pair (`lir_a` and `lir_b`).
+Baesd on the above steps, the `AnalogIn` [documentation](https://circuitpython.readthedocs.io/en/latest/shared-bindings/analogio/index.html), and the `DigitalInOut` [documentation](https://docs.circuitpython.org/en/latest/shared-bindings/digitalio/) fill out the below TODOs to print out readings from the left IR sensor pair (`lir_a` and `lir_b`).
 
 ```python
 import board
