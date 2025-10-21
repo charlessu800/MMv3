@@ -1,0 +1,53 @@
+# Troubleshooting and Commonly Asked Questions
+
+This document has troubleshooting steps you can take if you are having issues with you mouse in general. Uploading code, MAC vs Windows, and commonly asked questions as well.
+
+
+MacOS specific problems
+1. If your device cannot detect the ____
+    - try replugging the cable. If that doesn't work try a different usb-c port. If that doesn't work try another cable from a friend near you ;)
+2. You can ____ You cannot upload code to the mouse
+    -  Make sure you downloaded the right file
+3. You have issues with the screen
+    - Try again but better this time jk
+    - Try using putty instead... : steps
+
+
+Lowkey forgot all the other things
+
+---------------------------------------------------------
+
+
+1. Plug mouse into your computer and upload the latest **firmware.uf2** (see [releases](https://adafruit-circuit-python.s3.amazonaws.com/bin/raspberry_pi_pico/en_US/adafruit-circuitpython-raspberry_pi_pico-en_US-8.2.0.uf2) by dragging the file into the `RPI-RP2` folder that shows up. It should disappear and reappear as a `CIRCUITPY` folder.
+    * If you've uploaded firmware before, you'll need to hold the `BOOTSEL` button on the Pi Pico while plugging in.
+2. Download the CircuitPython [libraries](https://circuitpython.org/libraries) (Bundle for Version 8.x or 7.x, 9.x is untested! If you'd like you could test it for us ;) ), right click on 8.x -> open in new tab, unzip the file and upload the following folders and files to the lib/ folder on your mouse.
+    * adafruit_motor/
+    * adafruit_onewire/
+    * neopixel.mpy
+3. Upload the contents of [sanity/](../labs/sanity/) to the CircuitPython drive that shows up when you plug your mouse into your computer.
+4. Find the associated serial port for your mouse.
+    <details>
+    <summary>Windows</summary>
+
+    Open up `Device Manager` and check the `Ports (COM & LPT)` dropdown. Your serial (COM) port is one of those. If it's hard to identify, try unplugging and replugging your mouse and see which COM port disappears.
+
+    </details>
+    <details>
+    <summary>MacOS</summary>
+
+    Run `ls  /dev/tty.*` in Terminal. The correct port is one of those. If it's hard to identify, try unplugging and replugging your mouse and see which port disappears.
+
+    </details>
+    <details>
+    <summary>Linux</summary>
+
+    Hello there! A fellow power user you are. Your distro may be different, but chances are it's under something like `/dev/ttyACM0`.
+
+    </details>
+5. Bring up a serial monitor on that serial port (baud rate doesn't matter). There are many options of software to use, but the following are what I personally use.
+    * **Windows** - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) Open up putty -> Serial -> Enter COM[X] -> Run
+    * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) or [screen](https://en.wikipedia.org/wiki/GNU_Screen) after running ls /dev/tty.* youre going to type into your terminal -> screen "whatever you identified as the correct port". If this doesn't work, its a bit finiky, open up serialTools to the terminal tab change your serial port to the usb you identified and press the connect button on the right hand side. After, press disconnect and do the terminal instructions again.
+    * **Linux** - [screen](https://en.wikipedia.org/wiki/GNU_Screen)
+6. Follow the instructions printed to the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
+    * IR sensor readings should be around 30,000-60,000 without a surface in front of them and under 5,000 with your hand right in front of them. Speak to a staff member if you need help with this part of the lab!
+    * Spin the wheels manually, Encoders should be \~217 ticks per revolution, use the divot in the wheel as a guide :).
