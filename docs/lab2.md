@@ -48,6 +48,14 @@ Now it's time for component placement. Following the `ibom.html`, place all of t
     <a><b>Component Placement</b></a>
 </p>
 
+
+> [!IMPORTANT]  
+> Before moving on, double check that you correctly placed each component in the right place and the right orientation. Do so by checking below each box:
+> - [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.  
+> - [ ] (Add more things to visually confirm...)
+> - Finally you are ready to show one your TAs to give it one last lookover before getting reflowed.
+
+
 Finally, let's reflow the solder! Throw your board into the reflow oven, load up the correct profile, and wait. With any luck, all of your joints will melt and the back side of your board will be done.
 
 <p align="center">
@@ -56,6 +64,14 @@ Finally, let's reflow the solder! Throw your board into the reflow oven, load up
     <br>
     <a><b>Reflow</b></a>
 </p>
+
+
+> [!IMPORTANT]  
+> #### Testing Checkpoint #1 (COMPLETE THIS FIRST! Before moving on)
+> - [ ] Connect your micromouse's pi pico to your computer and check that ______
+> - [ ] Using the multimeter in lab probe these pads ______
+> - [ ] Ensure that connections are made everywhere!
+
 
 ### Hand Soldering
 
@@ -67,7 +83,46 @@ The rest of the components need to be attached by hand. The general process is t
     <a><b>How to Make a Solder Joint</b></a>
 </p>
 
-Let's start with the DRV8833 motor driver board. Solder the two 6-pin headers onto the board and bridge the `en` pads as shown in the following pictures. The technique that I find works best is to solder just one pin first with the part in any orientation. Then reheat that joint while pressing on the part to move it into perfect alignment. Finally, do the rest of the pins.
+Let's start off with the mouse's main PCB. Click `F`, located in the top right of the `ibom.html`, to see the remaining components.
+
+<p align="center">
+    <img height="250px" src="imgs/ibom_front.png"/>
+    <br>
+    <a><b>iBOM Front</b></a>
+</p>
+
+First we solder the IR LEDs. Note that the silkscreen should denote the polarity. The longer line corresponds to the longer leg of the IR LEDs. They also need to be mounted at a right angle so don't be afraid to bend them. Splaying the leads outward should hold them in place while you apply solder.
+
+<p align="center">
+    <img height="250px" src="imgs/ir_1.jpg"/>
+    <img height="250px" src="imgs/ir_2.jpg"/>
+    <br>
+    <a><b>IR LEDs</b></a>
+</p>
+
+
+Next let's solder the SMD resistors and SMD capacitors. These SMD components use the same soldering process except there's no hole to stick the part through. Some of the parts do have polarity, so if you're unsure make sure to ask your mentor.
+
+<p align="center">
+    <img height="200px" src="imgs/hand_1.jpg"/>
+    <img height="200px" src="imgs/hand_2.jpg"/>
+    <br>
+    <a><b>Some SMD Components</b></a>
+</p>
+
+Finally, let's add the bigger components! We saved these for last becuase if we did them any sooner it would make soldering the rest of the board more awkward. This is because the bigger components, like the battery connectors and motor connectors, would make it almost impossible to lay the pcb flat on a table.
+
+> [!NOTE]
+> Be sure that when you solder these bigger components, motor connectors and such, you place them on the correct side of the board! That side is the side opposite of the pi pico. DO NOT solder these bigger components on the same side as the green pi pico. You will save yourself a lot of headaches :D
+
+
+<p align="center">
+    <img height="200px" src="imgs/hand_3.jpg"/>
+    <br>
+    <a><b>The last THT Components Connectors</b></a>
+</p>
+
+Lastly, the DRV8833 motor driver board. Solder the two 6-pin headers onto the board and bridge the `en` pads as shown in the following pictures. The technique that I find works best is to solder just one pin first with the part in any orientation. Then reheat that joint while pressing on the part to move it into perfect alignment. Finally, do the rest of the pins.
 
 <p align="center">
     <img height="150px" src="imgs/DRV8833_4.jpg"/>
@@ -78,34 +133,7 @@ Let's start with the DRV8833 motor driver board. Solder the two 6-pin headers on
     <a><b>DRV8833 Motor Driver Assembly</b></a>
 </p>
 
-Next let's finish off the mouse's main PCB. Click `F` in the `ibom.html` to see the remaining components.
-
-<p align="center">
-    <img height="250px" src="imgs/ibom_front.png"/>
-    <br>
-    <a><b>iBOM Front</b></a>
-</p>
-
-To make alignment easier, starting with the shortest components usually works out best. The SMD components use the same soldering process except there's no hole to stick the part through. Some of the parts do have polarity, so if you're unsure make sure to ask your mentor.
-
-<p align="center">
-    <img height="200px" src="imgs/hand_1.jpg"/>
-    <img height="200px" src="imgs/hand_2.jpg"/>
-    <img height="200px" src="imgs/hand_3.jpg"/>
-    <br>
-    <a><b>Some THT Components</b></a>
-</p>
-
-For the IR LEDs, the silkscreen should denote the polarity. They also need to be mounted at a right angle so don't be afraid to bend them. Splaying the leads outward should hold them in place while you apply solder.
-
-<p align="center">
-    <img height="250px" src="imgs/ir_1.jpg"/>
-    <img height="250px" src="imgs/ir_2.jpg"/>
-    <br>
-    <a><b>IR LEDs</b></a>
-</p>
-
-With any luck, your board should be finished!
+With any luck, your board should be finished! At least all the soldering :)
 
 <p align="center">
     <img height="250px" src="imgs/pcb_done.jpg"/>
@@ -113,23 +141,10 @@ With any luck, your board should be finished!
     <a><b>Assembled PCB</b></a>
 </p>
 
-### Mechanical Assembly
-
-Let's finish assembling the mouse. Follow the pictures below. The screw threads are printed into the plastic so don't overtighten them. Don't be afraid to apply a bit of force when attaching the wheels since a tighter fit improves concentricity.
-
-<p align="center">
-    <img height="200px" src="imgs/mech_5.jpg"/>
-    <img height="200px" src="imgs/mech_4.jpg"/>
-    <img height="200px" src="imgs/mech_3.jpg"/>
-    <img height="200px" src="imgs/mech_2.jpg"/>
-    <img height="200px" src="imgs/mech_1.jpg"/>
-    <br>
-    <a><b>Final Assembly</b></a>
-</p>
-
 ## Sanity Check
 
-Now that your mouse is assembled, it is time to make sure everything is working by running a [sanity check](sanity.md).
+Now before we fully assembly your mouse we will make sure everything is working by running a [sanity check](sanity.md).
+That means check to see that each of the 6 pairs of IR LEDs work, that each of the two motors spin as they should, and that the encoders work by outputting data that makes sense. You can find out more of what this means by following the [sanity check](sanity.md) document. 
 
 ## IR Calibration
 
@@ -141,6 +156,21 @@ Bring up the sanity check again to the IR sensor printout section. Bend your IR 
     <img height="250px" src="imgs/ir_calib.jpg"/>
     <br>
     <a><b>Bent IR Sensors</b></a>
+</p>
+
+
+### Mechanical Assembly
+
+Yay you made it! Let's finish assembling the mouse. Follow the pictures below. The screw threads are printed into the plastic so don't overtighten them. Don't be afraid to apply a bit of force when attaching the wheels since a tighter fit improves concentricity.
+
+<p align="center">
+    <img height="200px" src="imgs/mech_5.jpg"/>
+    <img height="200px" src="imgs/mech_4.jpg"/>
+    <img height="200px" src="imgs/mech_3.jpg"/>
+    <img height="200px" src="imgs/mech_2.jpg"/>
+    <img height="200px" src="imgs/mech_1.jpg"/>
+    <br>
+    <a><b>Final Assembly</b></a>
 </p>
 
 ### Checkoff #1
