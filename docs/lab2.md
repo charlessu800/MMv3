@@ -53,7 +53,7 @@ Now it's time for component placement. Following the `ibom.html`, place all of t
 > Before moving on, double check that you correctly placed each component in the right place and the right orientation. Do so by checking below each box:
 > - [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.  
 > - [ ] (Add more things to visually confirm...)
-> - Finally you are ready to show one your TAs to give it one last lookover before getting reflowed.
+> Finally you are ready to show one your TAs to give it one last lookover before getting reflowed.
 
 
 Finally, let's reflow the solder! Throw your board into the reflow oven, load up the correct profile, and wait. With any luck, all of your joints will melt and the back side of your board will be done.
@@ -64,6 +64,8 @@ Finally, let's reflow the solder! Throw your board into the reflow oven, load up
     <br>
     <a><b>Reflow</b></a>
 </p>
+
+Sweet, so you got your newly reflowed pcb back. Before moving on to hand soldering the rest of the micromouse see the important testing checkpoint below.
 
 
 > [!IMPORTANT]  
@@ -141,6 +143,19 @@ With any luck, your board should be finished! At least all the soldering :)
     <a><b>Assembled PCB</b></a>
 </p>
 
+
+### Partial Mechanical Assembly
+
+We will only partially assembly the mechanical parts of the mouse first before assembling it all in one go. We do this to make swapping out motors easier if one motor does not work (hopefully not the case). So just connect the put the motors into their 3D printed motor housing and connect them to the board using the cables for now. Then check if the motors work by running the sanity check that we talk more about below.
+
+<p align="center">
+    <img height="200px" src="imgs/mech_5.jpg"/>
+    <img height="200px" src="imgs/mech_4.jpg"/>
+    <br>
+    <a><b>Partial Assembly</b></a>
+</p>
+
+
 ## Sanity Check
 
 Now before we fully assembly your mouse we will make sure everything is working by running a [sanity check](sanity.md).
@@ -159,7 +174,7 @@ Bring up the sanity check again to the IR sensor printout section. Bend your IR 
 </p>
 
 
-### Mechanical Assembly
+### Final Mechanical Assembly
 
 Yay you made it! Let's finish assembling the mouse. Follow the pictures below. The screw threads are printed into the plastic so don't overtighten them. Don't be afraid to apply a bit of force when attaching the wheels since a tighter fit improves concentricity.
 
