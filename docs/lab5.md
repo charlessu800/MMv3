@@ -94,6 +94,8 @@ CircuitPython has a builtin module for this called `pwmio`. Documentation for it
 
 Look at the `pwmio` documentation and fill in the TODOs below. A duty cycle of 0 or 65535 will set a pin to be completely off or on, respectively. For reasons best explained in a nice [article](https://learn.adafruit.com/improve-brushed-dc-motor-performance/choosing-decay-mode-and-pwm-frequency), we want to switch between the forward and slow decay states of the DRV8833 for PWM.
 
+ Try different variations, keeping in1's duty cycle the same (high), begin from a low value for in2, what do you notice as you increase?
+
 ```python
 import board
 import pwmio
@@ -102,8 +104,8 @@ lmot_in1 = """TODO create PWMOut object on pin GP16 at 20kHz"""
 lmot_in2 = """TODO create PWMOut object on pin GP17 at 20kHz"""
 
 while True:
-    lmot_in1.duty_cycle = """TODO set to 25% speed forward"""
-    lmot_in2.duty_cycle = """TODO set to 25% speed forward"""
+    lmot_in1.duty_cycle = """TODO set to 25% speed forward should be an int"""
+    lmot_in2.duty_cycle = """TODO set to 25% speed forward should be an int"""
 ```
 
 ### Checkoff #2
