@@ -66,7 +66,7 @@ if __name__ == "__main__":
         u_ang = Kp_ang * e_ang
     
         #set the throttles of the left/right motor.
-        # They're constrained to 0.2 plus or minus our steering correction depending on the motor
+        # Lets constrain it to 0.2 plus or minus our steering correction depending on the motor
         lmot.throttle = constrain(...)
         rmot.throttle = constrain(...)
 
