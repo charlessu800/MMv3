@@ -14,13 +14,17 @@ theta_target = 0
 e_ang = theta_target - theta    # This is the error term
 ```
 
-3. $$ K_p = 0.5 $$
+3. $ K_p = 0.5 $
 Why? What do we know? 
+
 $$ u(t) = error * K_p, error = 2 rad, u(t) = 1 $$
 
 Let's plug in what we know to find our unknown, $K_p$
+
 $$ 1 = 2 rad * K_p $$
+
 $$ K_p = 1 / 2 $$
+
 (P.S. don't mind the dropping of the units radian, idk why tbh)
 
 4. Too low and it corrects too slowly or not at all. Too high and it might oscillate and go unstable.
@@ -35,11 +39,15 @@ dist_target = 200
 
 e_lin = dist_target - dist  # This is the error term
 ```
-3. $$ K_p = 0.01 $$
+3. $ K_p = 0.01 $
 Why? What do we know? 
+
 $$ u(t) = error * K_p, error = 100mm, u(t) = 1 $$
 
 Let's plug in what we know to find our unknown, $K_p$
+
 $$ 1 = 100 * K_p $$
+
 $$ K_p = 1 / 100 $$
+
 (P.S. don't mind the dropping of the units radian, idk why tbh)
