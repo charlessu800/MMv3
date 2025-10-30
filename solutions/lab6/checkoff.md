@@ -14,7 +14,8 @@ theta_target = 0
 e_ang = theta_target - theta    # This is the error term
 ```
 
-3. $ K_p = 0.5 $
+3. $K_p = 0.5$
+
 Why? What do we know? 
 
 $$ u(t) = error * K_p, error = 2 rad, u(t) = 1 $$
@@ -39,7 +40,8 @@ dist_target = 200
 
 e_lin = dist_target - dist  # This is the error term
 ```
-3. $ K_p = 0.01 $
+3. $K_p = 0.01$
+
 Why? What do we know? 
 
 $$ u(t) = error * K_p, error = 100mm, u(t) = 1 $$
