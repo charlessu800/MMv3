@@ -65,8 +65,8 @@ if __name__ == "__main__":
         # whats the error of our target and the theta?
         angular_error = ...
         
-        # define the steering correction, Why should it should be the product of our Kp and angular error?
-        steer_correction = k_p * angular_error
+        # define the steering correction, Our correction should be proporitonal to our angular error
+        steer_correction = ...
     
         #set the throttles of the left/right motor.
         # Lets constrain it to 0.2 plus or minus our steering correction depending on the motor
