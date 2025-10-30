@@ -36,7 +36,7 @@ When implementing the P controller, start with $K_p$ values of around 0.1 and tu
 # import statements
 # Constants 
 # Encoders
-# motors
+# Motors
 ...
 lmot.decay_mode = motor.SLOW_DECAY
 rmot.decay_mode = motor.SLOW_DECAY
