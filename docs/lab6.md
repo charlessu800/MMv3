@@ -37,6 +37,7 @@ $K_p$: proportional gain. This value is responsible for determining how strongly
 ``` python
 ... 
 # import statements
+# Define these 
 # Constants 
 # Encoders
 # Motors
