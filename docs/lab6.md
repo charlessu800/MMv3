@@ -79,7 +79,7 @@ if __name__ == "__main__":
         time.sleep(0.05)
 ```
 
-After implementing this code, place your mouse on the ground and let it go straight. You likely won't get a perfectly straight mouse, this code by itself is not enough to completely correct our motor's direction; though it should be slightly better than just forward.
+After implementing this code, place your mouse on the ground and let it go straight. You likely won't get a perfectly straight mouse, this code by itself is not enough to completely correct our motor's direction; though it should be slightly better than just forward. This is fine for our shorter distances purpose.
 
 ### Checkoff #1
 
