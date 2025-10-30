@@ -32,30 +32,20 @@ Your job is to apply P control to make the mouse drive straight. The linear velo
 When implementing the P controller, start with $K_p$ values of around 0.1 and tune up and down from there based on performance. To make sure the mouse does move forward, add 0.2 to the `throttle` for each motor in addition to your correction term.
 
 ``` python
-ENCODER_TICKS_PER_REVOLUTION = ...
-WHEELBASE_DIAMETER = 78.0 # mm
-WHEEL_DIAMETER = 34.0 # mm
-
-# encoders
-lenc = rotaryio.IncrementalEncoder(board.GP12, board.GP13)
-renc = rotaryio.IncrementalEncoder(board.GP19, board.GP18)
-
+... 
+# import statements
+# Constants 
+# Encoders
 # motors
-lmot = motor.DCMotor(
-    pwmio.PWMOut(board.GP16, frequency=20000),
-    pwmio.PWMOut(board.GP17, frequency=20000)
-)
-rmot = motor.DCMotor(
-    pwmio.PWMOut(board.GP15, frequency=20000),
-    pwmio.PWMOut(board.GP14, frequency=20000)
-)
+...
 lmot.decay_mode = motor.SLOW_DECAY
 rmot.decay_mode = motor.SLOW_DECAY
 
 def constrain(val):
     return min(1, max(val, -1))
 if __name__ == "__main__":
-    MM_PER_TICK = pi * WHEEL_DIAMETER / ENCODER_TICKS_PER_REVOLUTION
+    MM_PER_TICK = ...
+
     while True:
         # Calculate the left distance value
         left_dist = ...
