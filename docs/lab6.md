@@ -127,7 +127,8 @@ if __name__ == "__main__":
         lin_error = ...
         lin_correction = constrain(..., -0.3, 0.3)
 
-        # combine
+        # combine linear correction and steer correction to ensure that our mouse's motor
+        # differentials are corrected
         lmot.throttle = constrain(lin_correction - steer_correction, -1, 1)
         rmot.throttle = constrain(lin_correction + steer_correction, -1, 1)
 
@@ -135,6 +136,10 @@ if __name__ == "__main__":
 
         time.sleep(0.05)
 ```
+Summary
+We're implementing this portion to account for errors in distance traveled forward, this is in contrast to the last code portion which was to ensure our mouse was driving straight. We're correcting for under/overshooting the target distance by adjusting overall speed.
+
+The linear controller provides the speed control over the motors, while the angular controller provides correction for the differential between motors. Both corrections are combined so we can simultaneously maintain straight motion AND reach the target distance.
 
 ### Checkoff #2
 
