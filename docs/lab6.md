@@ -31,6 +31,9 @@ Your job is to apply P control to make the mouse drive straight. The linear velo
 
 When implementing the P controller, start with $K_p$ values of around 0.1 and tune up and down from there based on performance. To make sure the mouse does move forward, add 0.2 to the `throttle` for each motor in addition to your correction term.
 
+$K_p$: proportional gain. This value is responsible for determining how strongly we'll be correcting for error. 
+You won't get a perfectly straight mouse, proporitonal control itself is not enough to completely correct our motor.
+
 ``` python
 ... 
 # import statements
