@@ -18,7 +18,11 @@ e_ang = theta_target - theta    # This is the error term
 
 Why? What do we know? 
 
-$$ u(t) = error * K_p, error = 2 rad, u(t) = 1 $$
+$$ u(t) = error * K_p $$
+
+$$ error = 2 rad $$
+
+$$ u(t) = 1 $$
 
 Let's plug in what we know to find our unknown, $K_p$
 
