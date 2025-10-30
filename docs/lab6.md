@@ -52,7 +52,6 @@ rmot = motor.DCMotor(
 lmot.decay_mode = motor.SLOW_DECAY
 rmot.decay_mode = motor.SLOW_DECAY
 
-""" Main """
 def constrain(val):
     return min(1, max(val, -1))
 if __name__ == "__main__":
