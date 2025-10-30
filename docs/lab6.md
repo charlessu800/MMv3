@@ -74,12 +74,12 @@ if __name__ == "__main__":
         lmot.throttle = constrain(...)
         rmot.throttle = constrain(...)
 
-        print(e_ang)
+        print(angular_error)
     
         time.sleep(0.05)
 ```
 
-After implementing this code, place your mouse on the ground and let it go straight. You likely won't get a perfectly straight mouse, this code by itself is not enough to completely correct our motor's direction.
+After implementing this code, place your mouse on the ground and let it go straight. You likely won't get a perfectly straight mouse, this code by itself is not enough to completely correct our motor's direction; though it should be slightly better than just forward.
 
 ### Checkoff #1
 
@@ -90,7 +90,7 @@ After implementing this code, place your mouse on the ground and let it go strai
 
 ## Go the Distance
 
-When solving mazes, it is quite useful to be able to drive forward a set distance. Let's swap out the 0.2 we blindly added to the `throttle` for a linear correction term. Your job is to get your mouse to drive straight forward 200mm and then stop. Like with driving straight, it'd help to answer the following questions.
+When solving mazes, it is quite useful to be able to drive forward a set distance. Let's swap out the 0.2 we blindly added to the `throttle` for a linear correction term. Your job is to get your mouse to drive straight forward 200mm (~8inches) and then stop. Like with driving straight, it'd help to answer the following questions.
 
 * What is the error for traveling a set distance?
 * Given an error, how do you change each motor's power to correct for it?
@@ -98,6 +98,7 @@ When solving mazes, it is quite useful to be able to drive forward a set distanc
 When implementing the P controller, start with $K_p$ values of 0.1 and tune. Don't remove your angular correction code from before since we still want to drive straight. Since we want to leave a little wiggle room for the angular correction, limit the linear correction term to around 0.3.
 
 ```python
+...
 def constrain(val, min_val, max_val):
     return min(max_val, max(val, min_val))
 
@@ -112,25 +113,25 @@ if __name__ == "__main__":
         theta = ...
 
         # angular P control
-        Kp_ang = ...
+        k_p = ...
         theta_target = ...
 
-        e_ang = ...
-        u_ang = ...
+        angular_error = ...
+        steer_correction = ...
 
         # linear P control
         Kp_lin = ...
         dist_target = ... # in mm
 
         # linear error?
-        e_lin = ...
-        u_lin = constrain(..., -0.3, 0.3)
+        lin_error = ...
+        lin_correction = constrain(..., -0.3, 0.3)
 
         # combine
-        lmot.throttle = constrain(u_lin - u_ang, -1, 1)
-        rmot.throttle = constrain(u_lin + u_ang, -1, 1)
+        lmot.throttle = constrain(lin_correction - steer_correction, -1, 1)
+        rmot.throttle = constrain(lin_correction + steer_correction, -1, 1)
 
-        print(e_ang, e_lin)
+        print(angular_error, lin_error)
 
         time.sleep(0.05)
 ```
