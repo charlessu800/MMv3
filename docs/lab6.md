@@ -32,29 +32,58 @@ Your job is to apply P control to make the mouse drive straight. The linear velo
 When implementing the P controller, start with $K_p$ values of around 0.1 and tune up and down from there based on performance. To make sure the mouse does move forward, add 0.2 to the `throttle` for each motor in addition to your correction term.
 
 ``` python
-...
+ENCODER_TICKS_PER_REVOLUTION = ...
+WHEELBASE_DIAMETER = 78.0 # mm
+WHEEL_DIAMETER = 34.0 # mm
+
+# encoders
+lenc = rotaryio.IncrementalEncoder(board.GP12, board.GP13)
+renc = rotaryio.IncrementalEncoder(board.GP19, board.GP18)
+
+# motors
+lmot = motor.DCMotor(
+    pwmio.PWMOut(board.GP16, frequency=20000),
+    pwmio.PWMOut(board.GP17, frequency=20000)
+)
+rmot = motor.DCMotor(
+    pwmio.PWMOut(board.GP15, frequency=20000),
+    pwmio.PWMOut(board.GP14, frequency=20000)
+)
+lmot.decay_mode = motor.SLOW_DECAY
+rmot.decay_mode = motor.SLOW_DECAY
+
+""" Main """
 def constrain(val):
     return min(1, max(val, -1))
+if __name__ == "__main__":
+    MM_PER_TICK = pi * WHEEL_DIAMETER / ENCODER_TICKS_PER_REVOLUTION
+    while True:
+        # Calculate the left distance value
+        left_dist = ...
+        # Calculate the right distance value
+        right_dist = ...
+        # Get both theta and distance from lab 
+        dist = ...
+        theta = ...
 
-while True:
-    # Calculate the left distance value
-    # Calculate the right distance value
+        # set Kp to a low value to begin, 0.1 etc, what do you notice when you vary this? 
+        Kp = ...
+        # What is our target theta value?
+        theta_target = ...
+        # whats the error of our target and the theta?
+        e_ang = ...
+        
+        # define the steering correction, Why should it should be the product of our Kp and angular error?
+        u_ang = Kp_ang * e_ang
+    
+        #set the throttles of the left/right motor.
+        # They're constrained to 0.2 plus or minus our steering correction depending on the motor
+        lmot.throttle = constrain(...)
+        rmot.throttle = constrain(...)
 
-    # Get both theta adn distance from lab 
-
-    # set Kp
-    # What is our theta target? define it.
-
-    # whats the error of our target and the theta?
-
-    # define the steering correction, Why should it should be the product of our Kp and angular error?
-    u_ang = Kp_ang * e_ang
-
-    # set the throttles of the left/right motor to be constrained to 0.2 plus or minus our steering correct depending on the motor
-
-    print(e_ang)
-
-    time.sleep(0.05)
+        print(e_ang)
+    
+        time.sleep(0.05)
 ```
 
 ### Checkoff #1
