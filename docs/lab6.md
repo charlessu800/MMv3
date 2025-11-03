@@ -127,10 +127,10 @@ if __name__ == "__main__":
         lin_error = ...
         lin_correction = constrain(..., -0.3, 0.3)
 
-        # combine linear correction and steer correction to ensure that our mouse's motor
-        # differentials are corrected
-        lmot.throttle = constrain(lin_correction - steer_correction, -1, 1)
-        rmot.throttle = constrain(lin_correction + steer_correction, -1, 1)
+        # combine linear correction and steer correction (action terms) to ensure that our mouse's motor
+        # differentials are corrected, just as the slides say.
+        lmot.throttle = constrain(..., -1, 1)
+        rmot.throttle = constrain(..., -1, 1)
 
         print(angular_error, lin_error)
 
