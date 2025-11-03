@@ -125,7 +125,7 @@ if __name__ == "__main__":
 
         # linear error?
         lin_error = ...
-        lin_correction = constrain(..., -0.3, 0.3)
+        lin_correction = constrain(..., -0.3, 0.3) # Constrain to what you'd like, I set this so that speed would be smooth
 
         # combine linear correction and steer correction (action terms) to ensure that our mouse's motor
         # differentials are corrected, just as the slides say.
