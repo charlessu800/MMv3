@@ -67,6 +67,7 @@ if __name__ == "__main__":
         angular_error = ...
         
         # define the steering correction, Our correction should be proporitonal to our angular error
+        # the action
         steer_correction = ...
     
         #set the throttles of the left/right motor.
