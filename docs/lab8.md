@@ -1,4 +1,4 @@
-# Lab 8: Maze Solving Primitives (WIP)
+# Lab 8: Maze Solving Primitives 
 
 The simplest implementation is to just have `forward`, `turn_left`, `turn_right`, and `turn_around` functions. Turning should be pretty easy, but implementing `forward` is trickier as it needs to wall follow, account for lack of walls to reference, and correct for distance errors. Here's some considerations.
 
