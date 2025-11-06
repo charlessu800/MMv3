@@ -64,7 +64,7 @@ def reset_odometry():
 
 When we're driving in a maze, our mouse will always be slightly misaligned with reference to a wall. Despite driving perfectly straight, this slight error will eventually cause us to crash. By performing feedback control with our IR sensors, we can correct for any misalignment!
 
-In the interest of developing maze solving primitives in the future, you will implement a `forward()` function that will have the mouse drive forwards 180mm and stop. While driving forward, maintain a fixed 45mm distance from a wall on the left.
+In the interest of developing maze solving primitives in the future, you will implement a `forward()` function that will have the mouse drive forwards 180mm (~7in) and stop. While driving forward, maintain a fixed 45mm distance from a wall on the left.
 
 Optimally, stable wall following means maintaining a 0° angle with respect to the wall. With just one sensor, it's impossible to determine the angle because multiple angles can correspond to the same sensed distance. Performing feedback control on just that sensor works, but it relies on the mouse moving a bit to correct for angular errors. With two sensors, we can determine the angle from the wall based on the difference between the sensors. Wall following could then be implemented as just setting the angle of the mouse based on the distance error and letting its forward motion correct for the distance error.
 
