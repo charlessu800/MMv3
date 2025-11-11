@@ -42,7 +42,7 @@ Note this checkpoint has no code.
 
 ## Turning
 
-Copy over the skeleton code in [labs/lab6/](../labs/lab6) (yes the name is out of ourder) onto your mouse. To encourage code readability, we've added a couple of function definitions that modularize the controller. Adapt your P controller code from [Lab 6](lab6.md) to these functions by filling out the TODOs. If you have a better way of organizing the functions, feel free to change things. Ultimately, it should have the same behavior as Checkoff #2 from Lab 5.
+Copy over the skeleton code in [labs/lab6/](../labs/lab6) onto your mouse. To encourage code readability, we've added a couple of function definitions that modularize the controller. Adapt your P controller code from [Lab 6](lab6.md) to these functions by filling out the TODOs. If you have a better way of organizing the functions, feel free to change things. Ultimately, it should have the same behavior as Checkoff #2 from Lab 5.
 
 Next, add I and D terms to both your angular and linear P controllers. You may find the `global` or `nonlocal` keywords to be useful for accessing variables defined outside of a function. We highly recommend just tuning the PID constants for your linear controller first and then tuning the angular controller when you implement turning. It's generally easier when that specific controller is being exercised. Good starting values are 10x smaller than $K_p$.
 
