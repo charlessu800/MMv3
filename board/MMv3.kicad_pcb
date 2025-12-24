@@ -13212,7 +13212,7 @@
 			(justify right bottom mirror)
 		)
 	)
-	(gr_text "MMv3.4\nOrig: Matt Tran\nRev: LJ Labata"
+	(gr_text "MMv3.5\nOrig: Matt Tran\nRev: LJ Labata"
 		(at 116.75 133 0)
 		(layer "B.SilkS")
 		(uuid "0ba17a9b-d889-426c-b4fe-048bed6b6be8")
