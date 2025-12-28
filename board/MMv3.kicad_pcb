@@ -12471,6 +12471,17 @@
 		(layer "F.SilkS")
 		(uuid "12fa3c3f-3d14-451a-a6a8-884fd1b32fa7")
 	)
+	(gr_rect
+		(start 159.4 69.4)
+		(end 170 76.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "133f12bd-2f61-40bb-a741-b5c0c86da7b5")
+	)
 	(gr_line
 		(start 142.75 75.25)
 		(end 142.75 75.25)
@@ -12661,6 +12672,27 @@
 		(layer "F.SilkS")
 		(uuid "56710f9f-1b12-4390-b98f-a7b0b9d28436")
 	)
+	(gr_rect
+		(start 127 72.4)
+		(end 137.2 76)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "59fb8628-fa18-4564-a3a9-3af34f625fb4")
+	)
+	(gr_line
+		(start 170.8 122.4)
+		(end 169.8 122.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "61147e14-c797-4b29-b9fc-7f6c2da11866")
+	)
 	(gr_line
 		(start 143 71.25)
 		(end 144 71.25)
@@ -12670,6 +12702,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "68f33eba-4b88-48e8-91ed-c0957ec28f4d")
+	)
+	(gr_line
+		(start 161.8 117.2)
+		(end 170.8 122.4)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6b0270fb-fb76-40b9-a7c6-337063030eb6")
 	)
 	(gr_line
 		(start 142.75 74.75)
@@ -12700,6 +12742,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "76d610b2-26d0-4902-8fad-66b016b00dbe")
+	)
+	(gr_line
+		(start 160 116.2)
+		(end 160 118)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "77e65e73-f256-48b1-b769-34d4b242dd17")
 	)
 	(gr_line
 		(start 172.25 118.25)
@@ -12791,6 +12843,17 @@
 		(layer "F.SilkS")
 		(uuid "a3f2fd8a-f5ba-4303-83a1-005848532396")
 	)
+	(gr_rect
+		(start 154.6 112.8)
+		(end 161.8 128)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "a4233799-9b6f-4e2b-babb-9a22a1311592")
+	)
 	(gr_line
 		(start 140 75.75)
 		(end 140.5 75.75)
@@ -12870,6 +12933,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "b54cae5b-c17c-4ed7-b249-2e7d5e83609a")
+	)
+	(gr_line
+		(start 170.8 122.4)
+		(end 170.4 121.6)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b632b2f8-ff29-4d27-bc28-ef3e829def1c")
 	)
 	(gr_line
 		(start 142 71.25)
@@ -13060,6 +13133,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "f4a1ab68-998b-43e3-aa33-40b58210bc99")
+	)
+	(gr_line
+		(start 169.8 122.4)
+		(end 170.4 121.6)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f4d590ab-7e32-47db-9e1d-9b4ab688856e")
 	)
 	(gr_line
 		(start 182.5 124.5)
@@ -14142,7 +14225,7 @@
 		)
 	)
 	(gr_text "Battery"
-		(at 147 122.75 0)
+		(at 138.2 122.6 0)
 		(layer "F.SilkS")
 		(uuid "96766fb9-314b-4b1a-a514-29332e82eba2")
 		(effects
@@ -14162,6 +14245,18 @@
 				(size 0.8001 0.762)
 				(thickness 0.1524)
 				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "For J1 make sure \nthe connectors are \nLevel and Parallel!\n(Use a 9V Battery)"
+		(at 155.2 113 -90)
+		(layer "F.SilkS")
+		(uuid "bf4092fa-39f6-4da3-bc1a-d5c6e7679bb8")
+		(effects
+			(font
+				(size 1.016 1.016)
+				(thickness 0.1524)
 			)
 			(justify left bottom)
 		)
@@ -14200,7 +14295,7 @@
 		)
 	)
 	(gr_text "cir_b"
-		(at 171.25 69 0)
+		(at 172.2 69 0)
 		(layer "F.SilkS")
 		(uuid "df83f395-2d18-47e2-a370-952ca41c2b3a")
 		(effects
