@@ -4955,7 +4955,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RASPBERRY_PI_PICO:RASPBERRY_PI_PICO"
+		(property "Footprint" "extraparts:RPi_Pico_SMD"
 			(at 135.89 78.74 0)
 			(effects
 				(font
@@ -5831,7 +5831,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS810"
+		(property "Footprint" "1825966_1 (1):SWDIP2_256X170P100"
 			(at 81.28 87.63 0)
 			(effects
 				(font

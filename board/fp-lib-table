@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "extraparts")(type "KiCad")(uri "${KIPRJMOD}/extraparts/extraparts.pretty")(options "")(descr ""))
   (lib (name "RASPBERRY_PI_PICO")(type "KiCad")(uri "${KIPRJMOD}/snapeda/RASPBERRY_PI_PICO")(options "")(descr ""))
+  (lib (name "1825966_1 (1)")(type "KiCad")(uri "${KIPRJMOD}/ultralibrarian/1825966_1 (1)/KiCADv6/footprints.pretty")(options "")(descr ""))
 )
