@@ -12,7 +12,7 @@ Also check the latest release for any manufacturing notes to make an older board
 
 ### Reflow Soldering
 
-Let's start with the back of the PCB which is where the majority of parts are located. Click `B` in the top right to show just the back.
+Let's start with the back of the PCB which is where the majority of parts are located. Click `B` in the top right to show just the back. Make sure it looks like below.
 
 <p align="center">
     <img height="250px" src="imgs/ibom_back.png"/>
@@ -28,7 +28,7 @@ Rather than solder each part by hand, we'll use reflow soldering which does it a
     <a><b>Reflow Solder Process</b></a>
 </p>
 
-Let's start by applying the solder paste using a **solder stencil**. Instead of squeezing the perfect amount onto each pad by hand, we can do it all at once by spreading paste over a stencil with holes cut out precisely where we want paste. For a good solder paste application, it's important to make sure the stencil is flush against the PCB and stays aligned. The process is very forgiving, so don't worry if your paste looks messy or goes a bit outside the pads.
+Let's start by applying the solder paste using a **solder stencil**. Instead of squeezing the perfect amount onto each pad by hand, we can do it all at once by spreading paste over a stencil with holes cut out precisely where we want paste. For a good solder paste application, it's important to make sure the stencil is flush against the PCB and stays aligned. Tape the stencil onto the table to keep the stencil from moving. The process is very forgiving, so don't worry if your paste looks messy or goes a bit outside the pads after having applied the paste with the stencil. You can use tweezers or something like it to clean up places where pads are shorted togehter. Please ask the TAs if you have any questions about this.  
 
 <p align="center">
     <img height="200px" src="imgs/stencil_align.jpg"/>
@@ -39,14 +39,79 @@ Let's start by applying the solder paste using a **solder stencil**. Instead of 
 </p>
 
 Now it's time for component placement. Following the `ibom.html`, place all of the components for the back side. None of the symmetric components have polarity, so don't worry about part orientation. Tweezers will be very useful, but don't squeeze too hard or your component will go flying. When placing components, press down gently so that it digs into the paste a bit to prevent it from moving. Again, the process is quite forgiving so don't worry if your parts aren't perfectly aligned as solder surface tension will generally pull them into alignment.
+<!-- <p align="center"> 
+    <img height="200px" src="imgs/place_cap.jpg"/> 
+    <img height="200px" src="imgs/place_all.jpg"/> 
+    <figure style="margin: 0; text-align: center;">
+        <img src="imgs/place_cap.jpg" style="width: 100%; max-width: 260px;">
+        <figcaption>With Capacitors</figcaption>
+    </figure>
+    <figure style="margin: 0; text-align: center;">
+        <img src="imgs/place_all.jpg" style="width: 100%; max-width: 260px;">
+        <figcaption>All Components Placed</figcaption>
+    </figure>
+    <br> 
+    <a>
+        <b>Component Placement</b>
+    </a> 
+</p> -->
 
-<p align="center">
-    <img height="200px" src="imgs/place_cap.jpg"/>
-    <img height="200px" src="imgs/place_res.jpg"/>
-    <img height="200px" src="imgs/place_all.jpg"/>
-    <br>
-    <a><b>Component Placement</b></a>
-</p>
+<div style="
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+">
+
+  <figure style="margin: 0; width: 260px; text-align: center;">
+    <img src="imgs/place_cap.jpg" style="width: 100%;">
+    <figcaption>With Capacitors</figcaption>
+  </figure>
+
+  <figure style="margin: 0; width: 260px; text-align: center;">
+    <img src="imgs/place_all.jpg" style="width: 100%;">
+    <figcaption>All Components Placed</figcaption>
+  </figure>
+  <figure style="margin: 0; width: 260px; text-align: center;">
+    <img src="imgs/place_cap.jpg" style="width: 100%;">
+    <figcaption>With Capacitors</figcaption>
+  </figure>
+
+  <figure style="margin: 0; width: 260px; text-align: center;">
+    <img src="imgs/place_all.jpg" style="width: 100%;">
+    <figcaption>All Components Placed</figcaption>
+  </figure>
+
+</div>
+
+<p align="center"><b>Component Placement</b></p>
+
+
+
+<!-- <div style="
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;    
+  max-width: 900px;
+  margin: 0 auto;
+">
+
+  <figure style="margin: 0; text-align: center;">
+    <img src="imgs/place_cap.jpg" style="width: 100%; max-width: 260px;">
+    <figcaption>With Capacitors</figcaption>
+  </figure>
+
+  <figure style="margin: 0; text-align: center;">
+    <img src="imgs/place_all.jpg" style="width: 100%; max-width: 260px;">
+    <figcaption>All Components Placed</figcaption>
+  </figure>
+
+</div>
+
+<p align="center"><b>Component Placement</b></p>
+ -->
 
 
 > [!IMPORTANT]  
