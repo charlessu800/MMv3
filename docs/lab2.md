@@ -55,39 +55,30 @@ Now it's time for component placement. Following the `ibom.html`, place all of t
         <b>Component Placement</b>
     </a> 
 </p> -->
-
 <div style="
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 32px;
   max-width: 900px;
   margin: 0 auto;
 ">
 
   <figure style="margin: 0; width: 260px; text-align: center;">
-    <img src="imgs/place_cap.jpg" style="width: 100%;">
+    <img src="imgs/place_cap.jpg"
+         style="height: 200px; width: 100%; object-fit: cover;">
     <figcaption>With Capacitors</figcaption>
   </figure>
 
   <figure style="margin: 0; width: 260px; text-align: center;">
-    <img src="imgs/place_all.jpg" style="width: 100%;">
-    <figcaption>All Components Placed</figcaption>
-  </figure>
-  <figure style="margin: 0; width: 260px; text-align: center;">
-    <img src="imgs/place_cap.jpg" style="width: 100%;">
-    <figcaption>With Capacitors</figcaption>
-  </figure>
-
-  <figure style="margin: 0; width: 260px; text-align: center;">
-    <img src="imgs/place_all.jpg" style="width: 100%;">
+    <img src="imgs/place_all.jpg"
+         style="height: 200px; width: 100%; object-fit: cover;">
     <figcaption>All Components Placed</figcaption>
   </figure>
 
 </div>
 
 <p align="center"><b>Component Placement</b></p>
-
 
 
 <!-- <div style="
