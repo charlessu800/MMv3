@@ -2,6 +2,7 @@
 
 PLUG YOUR PI PICO INTO YOUR COMPUTER TO MAKE SURE IT SHOWS UP IN YOUR FILE SYSTEM BEFORE YOU SOLDER IT :D
 
+
 ## Assembly
 
 Download the `ibom.html` from the [release](https://github.com/MrCroesus/MMv3/releases/download/MMv3.3/ibom.html) that matches your board revision and open it in your preferred browser. The interactive BOM (bill of materials) shows what parts are needed on your mouse's PCB (printed circuit board) and where they need to be placed.
