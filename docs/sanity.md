@@ -19,7 +19,7 @@ This lab provides code to test all aspects of your mouse and identify any hardwa
     <details>
     <summary>MacOS</summary>
 
-    Run `ls  /dev/tty.*` in Terminal. The correct port is one of those. If it's hard to identify, try unplugging and replugging your mouse and see which port disappears.
+    Run `ls  /dev/tty.*` in Terminal. The correct port is one of those. If it's hard to identify, try unplugging and replugging your mouse and see which port disappears. It should be something like /dev/tty.usbmodem101
 
     </details>
     <details>
