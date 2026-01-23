@@ -40,27 +40,10 @@ Let's start by applying the solder paste using a **solder stencil**. Instead of 
 
 Now it's time for component placement. Following the `ibom.html`, place all of the components for the back side. None of the symmetric components have polarity, so don't worry about part orientation. Tweezers will be very useful, but don't squeeze too hard or your component will go flying. When placing components, press down gently so that it digs into the paste a bit to prevent it from moving. Again, the process is quite forgiving so don't worry if your parts aren't perfectly aligned as solder surface tension will generally pull them into alignment.
 
-<div style="
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  max-width: 900px;
-  margin: 0 auto;
-">
-
-  <figure style="margin: 0; text-align: center;">
-    <img src="imgs/place_cap.jpg" style="width: 100%; max-width: 260px;">
-    <figcaption>With Capacitors</figcaption>
-  </figure>
-
-  <figure style="margin: 0; text-align: center;">
-    <img src="imgs/place_all.jpg" style="width: 100%; max-width: 260px;">
-    <figcaption>All Components Placed</figcaption>
-  </figure>
-
-</div>
-
-<p align="center"><b>Component Placement</b></p>
+| <b>Component Placement</b> | |
+|---|---|
+| <img src="imgs/place_cap.jpg" width="260"> | <img src="imgs/place_all.jpg" width="260"> |
+| <sub>With Capacitors</sub> | <sub>All Components Placed</sub> |
 
 
 > [!IMPORTANT]  
