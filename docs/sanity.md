@@ -2,18 +2,15 @@
 
 This lab provides the instructions and code to test all aspects of your mouse and identify any hardware defects. If at any point in this lab a test is not passed, ask an instructor for help debugging.
 
-
-[TODO: find someone else documentation on using git and vscode and bash and everything. fuck wait this is weird how???]
-
 0. Git Clone this repository. 
 
-
-[TODO: ADD RPI-RP2 Drive Directory Example image]
+[TODO: find someone else documentation on using git and vscode and bash and everything. fuck wait this is weird how???]
 
 1. Upload the firmware onto your Raspberry Pi Pico
 
 Plug mouse into your computer and upload the latest **firmware.uf2** (see [releases](https://adafruit-circuit-python.s3.amazonaws.com/bin/raspberry_pi_pico/en_US/adafruit-circuitpython-raspberry_pi_pico-en_US-8.2.0.uf2) by dragging the file into the `RPI-RP2` folder that shows up. The RPI-RP2 folder is shown in the following image.
 
+[TODO: ADD RPI-RP2 Drive Directory Example image]
 *RPI-RP2 Drive Directory Example image*
 
 It should disappear and reappear as a `CIRCUITPY` folder. As the following image shows.
@@ -39,7 +36,7 @@ Copy the contents of this folder, [sanity/lib](../labs/sanity/lib)
 
 and paste them into this folder, `$(CIRCUITPY)/lib`, in your Pi Pico. 
 
-(NOTE: `$(CIRCUITPY)` is used in this context to represent the file path of wherever your Raspberry Pi Pico is located in your PC)
+(NOTE: `$(CIRCUITPY)` is used in this context to represent the file path of wherever your Raspberry Pi Pico is located in your PC. For example, in the image below my Raspberry Pi Pico is located at `D:\` thus `$(CIRCUITPY)` is equivalent to writing `D:\`)
 ![CIRCUITPY_lib folder](imgs/CIRCUITPY_lib.PNG)
 *Location of $(CIRCUITPY)/lib folder you will paste into*
 
@@ -58,7 +55,7 @@ into the CircuitPython drive, `$(CIRCUITPY)`, that shows up when you plug your m
 ![CIRCUITPY_folder, Location in your Raspberry Pi Pico of where to paste the files into](imgs/CIRCUITPY_folder.PNG)
 *Location in your Raspberry Pi Pico of where to paste the files into*
 
-
+[TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc!]
 4. Find the associated serial port for your mouse.
     <details>
     <summary>Windows</summary>
