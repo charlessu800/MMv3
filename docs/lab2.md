@@ -203,7 +203,7 @@ We made the D1 Neopixel LED component optional as it's one of the hardest parts 
 > The Neopixel has a polarity or in other words a specific orientation that it must be placed in when soldering. You must place this part correctly in order for this Neopixel LED to work. Align this triangular indent on the Neopixel as shown below when soldering, highlighted in red. 
 
 <p align="center">
-    <img height="200px" src="imgs/lab2/smd_led_orientation.jpg"/>
+    <img height="250px" src="imgs/lab2/smd_led_orientation.jpg"/>
     <br>
     <a><b>SMD LED Proper Orientation</b></a>
 </p>
