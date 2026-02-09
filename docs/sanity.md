@@ -51,18 +51,14 @@ Upload these files from this folder, [labs/sanity](../labs/sanity) into the top 
 
 3. Upload the the Sanity program code into your Pi Pico
 
-Upload the `code.py` file from the folder, [sanity/](../labs/sanity/) into your Pi Pico's already existing `code.py` file.
-* [code.py](../labs/sanity/code.py)
+Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into your Pi Pico's CircuitPython drive, `$(CIRCUITPY)` already existing code.py file. You will need a text editor to open up this file (shown in the image below) to copy paste the sanity code. I would recommend you use VSCode, but any text editor can do. If you do not know how please ask one of our TAs for help :)
 
-into the CircuitPython drive, `$(CIRCUITPY)`, that shows up when you plug your mouse into your computer.
+<p align="center">
+    <img height="200px" src="imgs/sanity/circuitpython_code.PNG"/>
+    <br>
+    <a><b>Location in your Raspberry Pi Pico of where to paste the files into</b></a>
+</p>
 
-![sanity_folder, Location of the files in the sanity folder you need to copy](imgs/sanity_code.PNG) 
-*Location of the files in the sanity folder you need to copy*
-
-![CIRCUITPY_folder, Location in your Raspberry Pi Pico of where to paste the files into](imgs/CIRCUITPY_folder.PNG)
-*Location in your Raspberry Pi Pico of where to paste the files into*
-
-[TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc!]
 4. Find the associated serial port for your mouse.
     <details>
     <summary>Windows</summary>
@@ -80,8 +76,8 @@ into the CircuitPython drive, `$(CIRCUITPY)`, that shows up when you plug your m
     <summary>Linux</summary>
 
     Hello there! A fellow power user you are. Your distro may be different, but chances are it's under something like `/dev/ttyACM0`.
-
     </details>
+
 5. Bring up a serial monitor on that serial port (baud rate doesn't matter). There are many options of software to use, but the following are what I personally use.
     * **Windows** - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) Open up putty -> Serial -> Enter COM[X] -> Run
     * **MacOS** - [SerialTools](https://apps.apple.com/us/app/serialtools/id611021963?mt=12) or [screen](https://en.wikipedia.org/wiki/GNU_Screen) after running ls /dev/tty.* youre going to type into your terminal -> screen "whatever you identified as the correct port". If this doesn't work, its a bit finiky, open up serialTools to the terminal tab change your serial port to the usb you identified and press the connect button on the right hand side. After, press disconnect and do the terminal instructions again.
@@ -89,3 +85,6 @@ into the CircuitPython drive, `$(CIRCUITPY)`, that shows up when you plug your m
 6. Follow the instructions printed to the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
     * IR sensor readings should be around 30,000-60,000 without a surface in front of them and under 5,000 with your hand right in front of them. Speak to a staff member if you need help with this part of the lab!
     * Spin the wheels manually, Encoders should be \~217 ticks per revolution, use the divot in the wheel as a guide :).
+
+
+[TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor]
