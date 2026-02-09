@@ -51,7 +51,7 @@ rmot.decay_mode = motor.SLOW_DECAY
 
 if __name__ == "__main__":
     # debug
-    print("Hello World! Press button to begin tests.")
+    print("Hello World! Press the button next to the battery to begin tests.")
     while (but.value):
         pass
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     #     print("FAIL! No 1-Wire devices detected!")
 
     # IR sensors
-    print("Scanning IR sensors! Press button to start and stop.")
+    print("Scanning IR sensors! Press button next to the battery to start and stop.")
     while (but.value):
         pass
     time.sleep(0.05)
@@ -101,7 +101,7 @@ if __name__ == "__main__":
         pass
 
     # encoders
-    print("Reading encoders! Press button to start and stop.")
+    print("Reading encoders! Press button next to the battery to start and stop.")
     while (but.value):
         pass
     time.sleep(0.05)
@@ -116,7 +116,16 @@ if __name__ == "__main__":
         pass
 
     # motors
-    print("Testing motors! Plug in battery and turn on switch. Press button to start.")
+    print("Testing motors! Plug in battery and turn on switch. Press button next to the battery to start.")
+    print("(Beware your mouse may begin to run off on its own. You may want to pick it up just in case ;))\n")
+
+    while (but.value):
+        pass
+
+    print("Did you actually turn on the switch? You can tell if the red LED light underneath the motor driver is on. If so, please press the button next to the battery to actually make the test the motors please.\n")
+
+    time.sleep(0.5)
+    
     while (but.value):
         pass
 
@@ -153,9 +162,26 @@ if __name__ == "__main__":
     rmot.throttle = 0
     time.sleep(0.5)
 
-    print("Done with tests!")
+    print("Done with tests!\n")
+    
+    print("Press button next to the battery to just drive straight now :P")
+    print("Forever! :O\n")
 
-    print("Just gonna drive straight now :P")
+    while (but.value):
+        pass
+
+    print("JK!\n")
+    time.sleep(1)
+    print("IMPORTANT (please read the following as it will make using your mouse easier):")
+    print(" 1) Hit 'Ctrl + C', while in the screen/serial monitor/etc or flip the switch off to stop the mouse.")
+    print(" 2) If you have hit 'Ctrl + C' but now want your program to run again hit 'Ctrl  + D' now in order to reload your program. This is assuming you haven't made any changes to your code and you already uploaded your program into your Pi Pico after having hit 'Ctrl + C' \n")
+
+
+    print("Please press the button next to the battery now to actually make the mouse drive straight\n")
+    
+    while (but.value):
+        pass
+
     while True:
         delta = lenc.position - renc.position
         u = 0.001 * delta

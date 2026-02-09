@@ -51,3 +51,11 @@ Lowkey forgot all the other things
 6. Follow the instructions printed to the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
     * IR sensor readings should be around 30,000-60,000 without a surface in front of them and under 5,000 with your hand right in front of them. Speak to a staff member if you need help with this part of the lab!
     * Spin the wheels manually, Encoders should be \~217 ticks per revolution, use the divot in the wheel as a guide :).
+
+
+
+> [!IMPORTANT]  
+> #### Testing Checkpoint #1 (COMPLETE THIS FIRST! Before moving on)
+> - [ ] Connect your micromouse's pi pico to your computer and check that ______
+> - [ ] Using the multimeter in lab probe these pads ______
+> - [ ] Ensure that connections are made everywhere!
