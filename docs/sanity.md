@@ -22,7 +22,7 @@ It should disappear and reappear as a `CIRCUITPY` folder. As the following image
 
 2. Upload the CircuitPython libraries and custom firmware onto your Pi Pico
 
-Download this [.zip](/labs/sanity/lib.zip) file and unzip it into your Pi Pico directory. Your Pi Pico's directory should now look like this with all the newly added files and folders:
+Download this [sanity.zip](https://github.com/charlessu800/MMv3/releases/download/MMv3.5/sanity.zip) file and unzip it into your Pi Pico directory. Your Pi Pico's directory should now look like this with all the newly added files and folders:
 * CIRCUITPYTHON/
     * **lib/**
         * **adafruit_motor/**

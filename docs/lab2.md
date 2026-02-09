@@ -14,7 +14,7 @@ If the Pi Pico when connected to your PC does not show up like the image above s
 
 ## Assembly
 
-Download the `ibom.html` from the [release](https://github.com/charlessu800/MMv3/blob/better-debugging/releases/download/MMv3.5/ibom.html) and open it in your preferred browser. The interactive BOM (bill of materials) shows what parts are needed on your mouse's PCB (printed circuit board) and where they need to be placed. This html file will be very helpful when assembling your mouse.
+Download [`ibom.html`](https://github.com/charlessu800/MMv3/releases/download/MMv3.5/ibom.html) and open it in your preferred browser. The interactive BOM (bill of materials) shows what parts are needed on your mouse's PCB (printed circuit board) and where they need to be placed. This html file will be very helpful when assembling your mouse.
 
 To see images of all the individual parts, see the Google Drive link [here](https://drive.google.com/drive/folders/1rGae82BSrE_mvmMwKTBHT9P-unDKIKQj?usp=sharing).
 
