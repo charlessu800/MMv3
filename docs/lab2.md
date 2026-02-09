@@ -1,18 +1,24 @@
 # Lab 2: Assembly
 
-PLUG YOUR PI PICO INTO YOUR COMPUTER TO MAKE SURE IT SHOWS UP IN YOUR FILE SYSTEM BEFORE YOU SOLDER IT :D
+## Quick Check
+
+First thing you should do before you move on with the rest of the lab is to plug your Pi Pico into your computer and make sure it shows up in your file system like so: 
+
+(NOTE: the image below shows a drive named CIRCUITPY but you probably will see a drive named RPI-RP2. This is expected)
+![Updated CIRCUITPY Drive Directory Example image](imgs/CIRCUITPY.PNG)
+*Updated CIRCUITPY Drive Directory Example image in Windows 10 File Explorer*
+
+If the Pi Pico when connected to your PC does not show up like the image above shows try a different cable. If that does not work, try a different PC. Finally, if all the above does not work ask your TA for help.
 
 ## Assembly
 
-Download the `ibom.html` from the [release](https://github.com/MrCroesus/MMv3/releases/download/MMv3.3/ibom.html) that matches your board revision and open it in your preferred browser. The interactive BOM (bill of materials) shows what parts are needed on your mouse's PCB (printed circuit board) and where they need to be placed.
+Download the `ibom.html` from the [release](https://github.com/charlessu800/MMv3/blob/better-debugging/releases/download/MMv3.5/ibom.html) and open it in your preferred browser. The interactive BOM (bill of materials) shows what parts are needed on your mouse's PCB (printed circuit board) and where they need to be placed. This html file will be very helpful when assembling your mouse.
 
-To see images of all parts, see the Google Drive link [here](https://drive.google.com/drive/folders/1rGae82BSrE_mvmMwKTBHT9P-unDKIKQj?usp=sharing).
-
-Also check the latest release for any manufacturing notes to make an older board functionally equivalent to the newest revision.
+To see images of all the individual parts, see the Google Drive link [here](https://drive.google.com/drive/folders/1rGae82BSrE_mvmMwKTBHT9P-unDKIKQj?usp=sharing).
 
 ### Reflow Soldering
 
-Let's start with the back of the PCB which is where the majority of parts are located. Click `B` in the top right to show just the back. Make sure it looks like below.
+Let's start with the back of the PCB which is where the majority of parts are located. In the `ibom.html` file you have downloaded then opened in your a browser, click `B` in the top right to show just the back (highlighted in red). Make sure it looks like below.
 
 <p align="center">
     <img height="250px" src="imgs/ibom_back.png"/>
@@ -38,32 +44,23 @@ Let's start by applying the solder paste using a **solder stencil**. Instead of 
     <a><b>Solder Paste Application Process</b></a>
 </p>
 
-Now it's time for component placement. Following the `ibom.html`, place all of the components for the back side. None of the symmetric components have polarity, so don't worry about part orientation. Tweezers will be very useful, but don't squeeze too hard or your component will go flying. When placing components, press down gently so that it digs into the paste a bit to prevent it from moving. Again, the process is quite forgiving so don't worry if your parts aren't perfectly aligned as solder surface tension will generally pull them into alignment.
+Now it's time for component placement. Following the `ibom.html`, place all of the components for the back side. None of the symmetric components have polarity, so don't worry about part orientation. Tweezers will be very useful, but don't squeeze too hard or your component will go flying. Again, the process is quite forgiving so don't worry if your parts aren't perfectly aligned as solder surface tension will generally pull them into alignment.
 
 <p align="center">
-    <img height="200px" src="imgs/stencil_align.jpg"/>
+    <img height="200px" src="imgs/place_cap.jpg"/>
+    <img height="200px" src="imgs/place_res.jpg"/>
+    <img height="200px" src="imgs/place_all.jpg"/>
     <br>
-    <a><b>Solder Paste Application Process</b></a>
+    <a><b>Component Placement</b></a>
 </p>
 
-<p align="center">
-    <img height="200px" src="imgs/stencil_applied.jpg"/>
-    <br>
-    <a><b>Solder Paste Application Process</b></a>
-</p>
-
-<p align="center">
-    <img height="200px" src="imgs/paste_applied.jpg"/>
-    <br>
-    <a><b>Solder Paste Application Process</b></a>
-</p>
 
 
 > [!IMPORTANT]  
 > Before moving on, double check that you correctly placed each component in the right place and the right orientation. Do so by checking below each box:
-> - [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.  
-> - [ ] (Add more things to visually confirm...)
-> Finally you are ready to show one your TAs to give it one last lookover before getting reflowed.
+> - [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.
+> - Now you are ready to show one of your TAs to give it one last lookover before getting reflowed.
+
 
 
 Finally, let's reflow the solder! Throw your board into the reflow oven, load up the correct profile, and wait. With any luck, all of your joints will melt and the back side of your board will be done.
@@ -74,15 +71,6 @@ Finally, let's reflow the solder! Throw your board into the reflow oven, load up
     <br>
     <a><b>Reflow</b></a>
 </p>
-
-Sweet, so you got your newly reflowed pcb back. Before moving on to hand soldering the rest of the micromouse see the important testing checkpoint below.
-
-
-> [!IMPORTANT]  
-> #### Testing Checkpoint #1 (COMPLETE THIS FIRST! Before moving on)
-> - [ ] Connect your micromouse's pi pico to your computer and check that ______
-> - [ ] Using the multimeter in lab probe these pads ______
-> - [ ] Ensure that connections are made everywhere!
 
 
 ### Hand Soldering
@@ -103,6 +91,16 @@ Let's start off with the mouse's main PCB. Click `F`, located in the top right o
     <a><b>iBOM Front</b></a>
 </p>
 
+You can hand solder all the components on the Front side of the PCB in any order but there is a preferred way to do so that will be less of a headache when soldering.
+- D2 - D13 (THT LEDs)
+- SW1, SW2 (THT Switches)
+- DRV8833 (Motor Drive Module)
+- J3, J4 (ZH Series JST 6-pin connector)
+- J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
+- J1 (Keystone_593_594 Battery Contact Snaps)
+
+This is also the order in how the lab has been laid out.
+
 First we solder the IR LEDs. Note that the silkscreen should denote the polarity. The longer line corresponds to the longer leg of the IR LEDs. They also need to be mounted at a right angle so don't be afraid to bend them. Splaying the leads outward should hold them in place while you apply solder.
 
 <p align="center">
@@ -112,29 +110,16 @@ First we solder the IR LEDs. Note that the silkscreen should denote the polarity
     <a><b>IR LEDs</b></a>
 </p>
 
-
-Next let's solder the SMD resistors and SMD capacitors. These SMD components use the same soldering process except there's no hole to stick the part through. Some of the parts do have polarity, so if you're unsure make sure to ask your mentor.
-
+Next, solder the SW1, SW2 (THT Switches). These components do now have polarity so their orientation does not matter. Additionally, you should solder these switches such that they are on the Front side of the board but if you do not that is okay. They still will work.
 <p align="center">
-    <img height="200px" src="imgs/hand_1.jpg"/>
-    <img height="200px" src="imgs/hand_2.jpg"/>
+    <img height="250px" src="imgs/lab2/tht_switches.jpg"/>
     <br>
-    <a><b>Some SMD Components</b></a>
+    <a><b>THT Switches</b></a>
 </p>
 
-Finally, let's add the bigger components! We saved these for last becuase if we did them any sooner it would make soldering the rest of the board more awkward. This is because the bigger components, like the battery connectors and motor connectors, would make it almost impossible to lay the pcb flat on a table.
+Now, the DRV8833 motor driver board. Solder the two 6-pin headers onto the board and bridge the `en` pads as shown in the following pictures. Make sure when soldering the two 6-pin headers that you are placing them on the correct side of the board. It should look like the final image below where the `en` pads are on top.
 
-> [!NOTE]
-> Be sure that when you solder these bigger components, motor connectors and such, you place them on the correct side of the board! That side is the side opposite of the pi pico. DO NOT solder these bigger components on the same side as the green pi pico. You will save yourself a lot of headaches :D
-
-
-<p align="center">
-    <img height="200px" src="imgs/hand_3.jpg"/>
-    <br>
-    <a><b>The last THT Components Connectors</b></a>
-</p>
-
-Lastly, the DRV8833 motor driver board. Solder the two 6-pin headers onto the board and bridge the `en` pads as shown in the following pictures. The technique that I find works best is to solder just one pin first with the part in any orientation. Then reheat that joint while pressing on the part to move it into perfect alignment. Finally, do the rest of the pins.
+The technique that I find works best is to solder just one pin first with the part in any orientation. Then reheat that joint while pressing on the part to move it into perfect alignment. Finally, do the rest of the pins.
 
 <p align="center">
     <img height="150px" src="imgs/DRV8833_4.jpg"/>
@@ -145,14 +130,81 @@ Lastly, the DRV8833 motor driver board. Solder the two 6-pin headers onto the bo
     <a><b>DRV8833 Motor Driver Assembly</b></a>
 </p>
 
+Finally, let's add the connector components! We saved these for last because if we did them any sooner it would make soldering the rest of the board more awkward. This is because the bigger components, like the battery connectors and motor connectors, would make it almost impossible to lay the pcb flat on a table.
+
+> [!NOTE]
+> Be sure that when you solder these bigger components, motor connectors and such, you place them on the correct side of the board, the Front side. That side is the side opposite of the pi pico. DO NOT solder these bigger components on the same side as the green pi pico. You will save yourself a lot of headaches :D
+
+Lets start by soldering first the J3, J4 (ZH Series JST 6-pin connector) components
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/white_connectors.jpg"/>
+    <br>
+    <a><b>J3, J4 (ZH Series JST 6-pin connector)</b></a>
+</p>
+
+Next solder first the J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/black_connectors.jpg"/>
+    <br>
+    <a><b>J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
+</b></a>
+</p>
+
+Now let's solder the J1 (Keystone_593_594 Battery Contact Snaps) connectors. When soldering these connectors it is advised to take the two Battery Contact Snaps, positive and negative, and attach them to a 9V battery first before placing them on the board. See the images below. This is to make sure that when you solder them onto the board they are aligned. You can solder the Battery Contact Snaps while the 9V battery is still connected to them.
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/use_battery_align.jpg"/>
+    <img height="200px" src="imgs/lab2/final_battery.jpg"/>
+    <img height="200px" src="imgs/lab2/final_wo_battery.jpg"/>
+    <br>
+    <a><b>Using a 9V Battery for Alignment of the J1 (Keystone_593_594 Battery Contact Snaps)
+</b></a>
+</p>
+
+Additionally, make sure that you place the two Battery Contact Snaps in each of their respectative places. 
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/final_wo_battery.jpg"/>
+    <br>
+    <a><b>Good Placement
+</b></a>
+</p>
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/bad_battery_pins.jpg"/>
+    <br>
+    <a><b>Bad Placement
+</b></a>
+</p>
+
 With any luck, your board should be finished! At least all the soldering :)
 
 <p align="center">
     <img height="250px" src="imgs/pcb_done.jpg"/>
     <br>
-    <a><b>Assembled PCB</b></a>
+    <a><b>PCB with completed soldered components</b></a>
 </p>
 
+### Optional SMD LED Component
+
+We made the D1 Neopixel LED component optional as it's one of the hardest parts to solder. It is the only hand soldered SMD component. The Neopixel LED uses the same soldering process except there's no hole to stick the part through. Please see this [video (skip to 2:16)](https://youtu.be/RODp8HSlFPA?t=136) on soldering such components if you want to give this a try. You will need tweezers.
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/process_smd_led.jpg"/>
+    <br>
+    <a><b>Part of the process to solder D1 Neopixel LED with tweezers</b></a>
+</p>
+
+> [!NOTE]  
+> The Neopixel has a polarity or in other words a specific orientation that it must be placed in when soldering. You must place this part correctly in order for this Neopixel LED to work. Align this triangular indent on the Neopixel as shown below when soldering, highlighted in red. 
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/smd_led_orientation.jpg"/>
+    <br>
+    <a><b>SMD LED Proper Orientation</b></a>
+</p>
 
 ### Partial Mechanical Assembly
 
@@ -165,6 +217,20 @@ We will only partially assembly the mechanical parts of the mouse first before a
     <a><b>Partial Assembly</b></a>
 </p>
 
+> [!IMPORTANT]  
+> Make sure that when you plug in the motor cables that they are plugged in all the way. Below are what a good motor cable plugged connection looks like and a bad one. Do this before running the sanity check code.
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/good_motor_plug.jpg"/>
+    <br>
+    <a><b>Good - Motor Cables plugged in all the way</b></a>
+</p>
+
+<p align="center">
+    <img height="200px" src="imgs/lab2/bad_motor_plug.jpg"/>
+    <br>
+    <a><b>Bad - Motor Cables not plugged in all the way</b></a>
+</p>
 
 ## Sanity Check
 
