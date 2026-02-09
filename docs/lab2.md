@@ -104,7 +104,7 @@ You can hand solder all the components on the Front side of the PCB in any order
 
 This is also the order in how the lab has been laid out.
 
-First we solder the IR LEDs. Note that the silkscreen should denote the polarity. The longer line corresponds to the longer leg of the IR LEDs. They also need to be mounted at a right angle so don't be afraid to bend them. Splaying the leads outward should hold them in place while you apply solder.
+First we solder the IR LEDs. Note that the silkscreen should denote the polarity. The longer line corresponds to the longer leg of the IR LEDs. They also need to be mounted at a right angle so don't be afraid to bend them. Splaying the leads outward should hold them in place while you apply solder. After you solder them you can cut off the excess legs of the IR LEDs but be careful! The ends will fly off when cutting so protect your eyes. Look away if you don't have glasses ;(
 
 <p align="center">
     <img height="250px" src="imgs/ir_1.jpg"/>
