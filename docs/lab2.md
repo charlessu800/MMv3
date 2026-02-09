@@ -6,7 +6,7 @@ First thing you should do before you move on with the rest of the lab is to plug
 
 (NOTE: the image below shows a drive named CIRCUITPY but you probably will see a drive named RPI-RP2. This is expected)
 <p align="center">
-    <img height="250px" src="imgs/CIRCUITPY.PNG"/>
+    <img height="200px" src="imgs/CIRCUITPY.PNG"/>
     <br>
     <a><b>Updated CIRCUITPY Drive Directory Example image in Windows 10 File Explorer</b></a>
 </p>
