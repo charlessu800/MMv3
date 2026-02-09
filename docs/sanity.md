@@ -51,7 +51,7 @@ Upload these files from this folder, [labs/sanity](../labs/sanity) into the top 
 
 3. Upload the the Sanity program code into your Pi Pico
 
-Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into your Pi Pico's CircuitPython drive, `$(CIRCUITPY)` already existing code.py file. You will need a text editor to open up this file (shown in the image below) to copy paste the sanity code. I would recommend you use VSCode, but any text editor can do. If you do not know how please ask one of our TAs for help :)
+Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into your Pi Pico's, the CircuitPython drive, already existing `code.py` file. You will need a text editor to open up this file (shown in the image below) to copy paste the sanity code. I would recommend you use VSCode, but any text editor can do. If you do not know how please ask one of our TAs for help :)
 
 <p align="center">
     <img height="200px" src="imgs/sanity/circuitpython_code.PNG"/>
@@ -87,4 +87,4 @@ Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into y
     * Spin the wheels manually, Encoders should be \~217 ticks per revolution, use the divot in the wheel as a guide :).
 
 
-[TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor]
+[TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor. Also add more photos!]
