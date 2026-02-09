@@ -18,7 +18,7 @@ To see images of all the individual parts, see the Google Drive link [here](http
 
 ### Reflow Soldering
 
-Let's start with the back of the PCB which is where the majority of parts are located. In the `ibom.html` file you have downloaded then opened in your a browser, click `B` in the top right to show just the back (highlighted in red). Make sure it looks like below.
+Let's start with the back of the PCB which is where the majority of parts are located. In the `ibom.html` file you have downloaded then opened in your a browser, click `B` in the top right (highlighted in red) to show just the back side of the PCB. Make sure it looks like below.
 
 <p align="center">
     <img height="250px" src="imgs/ibom_back.png"/>
@@ -29,7 +29,7 @@ Let's start with the back of the PCB which is where the majority of parts are lo
 Rather than solder each part by hand, we'll use reflow soldering which does it all at once. In reflow soldering, we place components on top of pads covered in solder paste before sending the whole thing through an oven to melt the solder, making permanent joints.
 
 <p align="center">
-    <img height="250px" src="https://www.omron.com/global/en/assets/img/technology/omrontechnics/vol51/015/img_01.jpg"/>
+    <img height="250px" src="imgs/lab2/reflow_solder_process.jpg"/>
     <br>
     <a><b>Reflow Solder Process</b></a>
 </p>
@@ -58,7 +58,7 @@ Now it's time for component placement. Following the `ibom.html`, place all of t
 
 > [!IMPORTANT]  
 > Before moving on, double check that you correctly placed each component in the right place and the right orientation. Do so by checking below each box:
-> - [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.
+- [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.
 > - Now you are ready to show one of your TAs to give it one last lookover before getting reflowed.
 
 
