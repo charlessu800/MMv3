@@ -51,7 +51,7 @@ Upload these files from this folder, [labs/sanity](../labs/sanity), into the top
 
 3. Upload the Sanity program code into your Pi Pico
 
-Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into your Pi Pico's CircuitPython drive, `$(CIRCUITPY)`, the already existing code.py file. You will need a text editor to open up this file (shown in the image below) to copy and paste the sanity code. I would recommend you use VSCode, but any text editor can do. If you do not know how, please ask one of our TAs for help :)
+Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into your Pi Pico's already existing `code.py` file. You will need a text editor to open up this file (shown in the image below) to copy and paste the sanity code. I would recommend you use VSCode, but any text editor can do. If you do not know how, please ask one of our TAs for help :)
 
 <p align="center">
     <img height="200px" src="imgs/sanity/circuitpython_code.PNG"/>
