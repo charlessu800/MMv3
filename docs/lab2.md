@@ -5,9 +5,11 @@
 First thing you should do before you move on with the rest of the lab is to plug your Pi Pico into your computer and make sure it shows up in your file system like so: 
 
 (NOTE: the image below shows a drive named CIRCUITPY but you probably will see a drive named RPI-RP2. This is expected)
-![Updated CIRCUITPY Drive Directory Example image](imgs/CIRCUITPY.PNG)
-*Updated CIRCUITPY Drive Directory Example image in Windows 10 File Explorer*
-
+<p align="center">
+    <img height="250px" src="imgs/CIRCUITPY.PNG"/>
+    <br>
+    <a><b>Updated CIRCUITPY Drive Directory Example image in Windows 10 File Explorer</b></a>
+</p>
 If the Pi Pico when connected to your PC does not show up like the image above shows try a different cable. If that does not work, try a different PC. Finally, if all the above does not work ask your TA for help.
 
 ## Assembly
@@ -57,13 +59,13 @@ Now it's time for component placement. Following the `ibom.html`, place all of t
 
 
 > [!IMPORTANT]  
-> Before moving on, double check that you correctly placed each component in the right place and the right orientation. Do so by checking below each box:
-- [ ] Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.
-> - Now you are ready to show one of your TAs to give it one last lookover before getting reflowed.
+> Before moving on, double check that you correctly placed each component in the right place and the right orientation.
+> - Are your MOSFET transistors in the right place? Remember that there are 3 x n-channel MOSFETs (Q2,Q3,Q4) and **1 x p-channel MOSFET (Q1)**.
+> Now you are ready to show one of your TAs to give it one last lookover before getting reflowed.
 
 
 
-Finally, let's reflow the solder! Throw your board into the reflow oven, load up the correct profile, and wait. With any luck, all of your joints will melt and the back side of your board will be done.
+Finally, let's reflow the solder! Bring you board with the placed components to your TA. They will do a final check before throwing your board into the reflow oven, loading up the correct profile, and waiting. With any luck, all of your joints will melt and the back side of your board will be done.
 
 <p align="center">
     <img height="200px" src="imgs/reflow.jpg"/>
@@ -92,12 +94,12 @@ Let's start off with the mouse's main PCB. Click `F`, located in the top right o
 </p>
 
 You can hand solder all the components on the Front side of the PCB in any order but there is a preferred way to do so that will be less of a headache when soldering.
-- D2 - D13 (THT LEDs)
-- SW1, SW2 (THT Switches)
-- DRV8833 (Motor Drive Module)
-- J3, J4 (ZH Series JST 6-pin connector)
-- J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
-- J1 (Keystone_593_594 Battery Contact Snaps)
+1. D2 - D13 (THT LEDs)
+2. SW1, SW2 (THT Switches)
+3. DRV8833 (Motor Drive Module)
+4. J3, J4 (ZH Series JST 6-pin connector)
+5. J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
+6. J1 (Keystone_593_594 Battery Contact Snaps)
 
 This is also the order in how the lab has been laid out.
 
@@ -138,7 +140,7 @@ Finally, let's add the connector components! We saved these for last because if 
 Lets start by soldering first the J3, J4 (ZH Series JST 6-pin connector) components
 
 <p align="center">
-    <img height="200px" src="imgs/lab2/white_connectors.jpg"/>
+    <img height="250px" src="imgs/lab2/white_connectors.jpg"/>
     <br>
     <a><b>J3, J4 (ZH Series JST 6-pin connector)</b></a>
 </p>
@@ -146,7 +148,7 @@ Lets start by soldering first the J3, J4 (ZH Series JST 6-pin connector) compone
 Next solder first the J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
 
 <p align="center">
-    <img height="200px" src="imgs/lab2/black_connectors.jpg"/>
+    <img height="250px" src="imgs/lab2/black_connectors.jpg"/>
     <br>
     <a><b>J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole Gold)
 </b></a>
@@ -155,9 +157,9 @@ Next solder first the J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole 
 Now let's solder the J1 (Keystone_593_594 Battery Contact Snaps) connectors. When soldering these connectors it is advised to take the two Battery Contact Snaps, positive and negative, and attach them to a 9V battery first before placing them on the board. See the images below. This is to make sure that when you solder them onto the board they are aligned. You can solder the Battery Contact Snaps while the 9V battery is still connected to them.
 
 <p align="center">
-    <img height="200px" src="imgs/lab2/use_battery_align.jpg"/>
-    <img height="200px" src="imgs/lab2/final_battery.jpg"/>
-    <img height="200px" src="imgs/lab2/final_wo_battery.jpg"/>
+    <img height="250px" src="imgs/lab2/use_battery_align.jpg"/>
+    <img height="250px" src="imgs/lab2/final_battery.jpg"/>
+    <img height="250px" src="imgs/lab2/final_wo_battery.jpg"/>
     <br>
     <a><b>Using a 9V Battery for Alignment of the J1 (Keystone_593_594 Battery Contact Snaps)
 </b></a>
@@ -166,14 +168,14 @@ Now let's solder the J1 (Keystone_593_594 Battery Contact Snaps) connectors. Whe
 Additionally, make sure that you place the two Battery Contact Snaps in each of their respectative places. 
 
 <p align="center">
-    <img height="200px" src="imgs/lab2/final_wo_battery.jpg"/>
+    <img height="250px" src="imgs/lab2/final_wo_battery.jpg"/>
     <br>
     <a><b>Good Placement
 </b></a>
 </p>
 
 <p align="center">
-    <img height="200px" src="imgs/lab2/bad_battery_pins.jpg"/>
+    <img height="250px" src="imgs/lab2/bad_battery_pins.jpg"/>
     <br>
     <a><b>Bad Placement
 </b></a>
