@@ -1,4 +1,4 @@
-# IR Section
+# Lab 4 IR Section
 ## Checkoff #1
 
 1. Just looking to see if the readings are good and consistent with other mice. If not, they might have trouble later.

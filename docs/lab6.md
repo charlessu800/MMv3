@@ -1,4 +1,4 @@
-# Lab 6: Intro to PID
+# Lab 6: Intro to (P) of PID
 
 ## Background
 

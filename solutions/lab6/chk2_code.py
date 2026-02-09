@@ -46,80 +46,34 @@ rmot.decay_mode = motor.SLOW_DECAY
 def constrain(val, min_val, max_val):
     return min(max_val, max(val, min_val))
 
-# compute dist and theta
-def compute_odometry():
+if __name__ == "__main__":
     MM_PER_TICK = pi * WHEEL_DIAMETER / ENCODER_TICKS_PER_REVOLUTION
 
-    left_dist  = lenc.position * MM_PER_TICK
-    right_dist = renc.position * MM_PER_TICK
-
-    dist  = (left_dist + right_dist) / 2
-    theta = (right_dist - left_dist) / WHEELBASE_DIAMETER
-
-    return dist, theta
-
-# compute correction and error terms for a target theta
-e_ang_sum, e_ang_prev = 0, 0
-def compute_u_ang(theta, theta_target):
-    Kp, Ki, Kd = 0.1, 0.005, 0.01
-
-    global e_ang_sum, e_ang_prev
-    e_ang = theta_target - theta
-
-    # update I
-    e_ang_sum += e_ang
-    e_ang_sum = constrain(e_ang_sum, -20, 20) # windup
-
-    # update D
-    e_ang_deriv = e_ang - e_ang_prev
-    e_ang_prev  = e_ang
-
-    u_ang = Kp * e_ang + Ki * e_ang_sum + Kd * e_ang_deriv
-    return u_ang, e_ang
-
-# compute correction and error terms for a target distance
-e_lin_sum, e_lin_prev = 0, 0
-def compute_u_lin(dist, dist_target):
-    Kp, Ki, Kd = 0.01, 0.0005, 0.005
-
-    global e_lin_sum, e_lin_prev
-    e_lin = dist_target - dist
-
-    # update I
-    e_lin_sum += e_lin
-    e_lin_sum = constrain(e_lin_sum, -100, 100) # windup
-
-    # update D
-    e_lin_deriv = e_lin - e_lin_prev
-    e_lin_prev  = e_lin
-
-    u_lin= Kp * e_lin + Ki * e_lin_sum + Kd * e_lin_deriv
-    u_lin = constrain(u_lin, -0.3, 0.3)
-    return u_lin, e_lin
-
-def run_control_loop(theta_target, dist_target):
-    dist, theta = compute_odometry()
-    u_ang, e_ang = compute_u_ang(theta, theta_target)
-    u_lin, e_lin = compute_u_lin(dist, dist_target)
-    lmot.throttle = constrain(u_lin - u_ang, -1, 1)
-    rmot.throttle = constrain(u_lin + u_ang, -1, 1)
-    return e_ang, e_lin
-
-def reset_odometry():
-    lenc.position, renc.position = 0, 0
-
-def reset_controls():
-    global e_ang_sum, e_ang_prev, e_lin_sum, e_lin_prev
-    e_ang_sum, e_ang_prev, e_lin_sum, e_lin_prev = 0, 0, 0, 0
-
-def turn_left():
-    reset_odometry()
-    while abs(run_control_loop(pi/2, 0)[0]) > 0.05:
-        time.sleep(0.02)
-    reset_controls()
-    lmot.throttle, rmot.throttle = 0, 0
-
-if __name__ == "__main__":
     while True:
-        turn_left()
-        time.sleep(1)
+        left_dist  = lenc.position * MM_PER_TICK
+        right_dist = renc.position * MM_PER_TICK
+
+        dist  = (left_dist + right_dist) / 2
+        theta = (right_dist - left_dist) / WHEELBASE_DIAMETER
+
+        # angular P control
+        Kp_ang = 0.1
+        theta_target = 0
+
+        e_ang = theta_target - theta
+        u_ang = Kp_ang * e_ang
+
+        # linear P control
+        Kp_lin = 0.01
+        dist_target = 200
+
+        e_lin = dist_target - dist
+        u_lin = constrain(Kp_lin * e_lin, -0.3, 0.3) # 0.9 is a bit too fast
+
+        # combine
+        lmot.throttle = constrain(u_lin - u_ang, -1, 1)
+        rmot.throttle = constrain(u_lin + u_ang, -1, 1)
+
+        print(e_ang, e_lin)
+
+        time.sleep(0.05)

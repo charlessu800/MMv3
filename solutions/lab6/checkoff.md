@@ -2,18 +2,58 @@
 
 ## Checkoff #1
 
-1. Remember Riemann sums from calculus? Basically we just add up the measured error over time. Technically we're supposed to multiply by dt, but that's just a scalar error.
-2. Go back to the definition of derivative. Basically we take the difference between our current error and previous error. Technically we're supposed to divide by dt, but that again a scalar error.
-3. The main idea is that we limit the size of the integral term. A good limit is whatever value of the integral term causes the maximum power to be put into the motor.
+1. See that the mouse drives straight. Our motors are actually pretty consistent so the difference may not be obvious. The angular error doesn't actually need to go to 0 since we're measuring distance not velocity. It just needs to be stable. Also take a look at their code since this is the first time there's a decent amount of it. Try to encourage them towards clean and readable code. Solution code is in [chk1_code.py](chk1_code.py).
+2. Some combination of a target theta minus the actual theta. They could just say theta, but make sure say we can generalize to any desired theta.
+```python
+left_dist  = lenc.position * MM_PER_TICK
+right_dist = renc.position * MM_PER_TICK
+
+theta = (right_dist - left_dist) / WHEELBASE_DIAMETER
+theta_target = 0
+
+e_ang = theta_target - theta    # This is the error term
+```
+
+3. $K_p = 0.5$
+
+Why? What do we know? 
+
+$$ u(t) = error * K_p $$
+
+$$ error = 2 rad $$
+
+$$ u(t) = 1 $$
+
+Let's plug in what we know to find our unknown, $K_p$
+
+$$ 1 = 2 rad * K_p $$
+
+$$ K_p = 1 / 2 $$
+
+(P.S. don't mind the dropping of the units radian, idk why tbh)
+
+4. Too low and it corrects too slowly or not at all. Too high and it might oscillate and go unstable.
 
 ## Checkoff #2
 
-1. As long as it drives straight 200mm and stops like in Lab 5, it's good.
-2. As long as it turns in place about 90° and stops, it's good.
-3. As long as it turns in place about 90° and stops for one second and keeps doing that, it's good. Solution code is in [chk2_code.py](chk2_code.py).
-4. They should mention some concept of adding up an error over time. Addressing integral windup by constraining the summation's value is highly recommended, but not necessary.
+1. See that the mouse drives straight and stops after around 20cm. Don't worry too much about extreme precision. Solution code is in [chk2_code.py](chk2_code.py).
+2. Some combination of a target distance minus the current distance.
+```python
+dist  = (left_dist + right_dist) / 2
+dist_target = 200
 
-## Checkoff #3
+e_lin = dist_target - dist  # This is the error term
+```
+3. $K_p = 0.01$
 
-1. Make sure that the mouse maintains roughly a constant distance from the wall and drives parallel. It should move forward 180mm and stop every second. Solution code is in [chk3_code.py](chk3_code.py).
-2. Swap the fixed distance with the right sensor's reading. There are some extra considerations since the angle from both walls are not independent but that's the main idea.
+Why? What do we know? 
+
+$$ u(t) = error * K_p, error = 100mm, u(t) = 1 $$
+
+Let's plug in what we know to find our unknown, $K_p$
+
+$$ 1 = 100 * K_p $$
+
+$$ K_p = 1 / 100 $$
+
+(P.S. don't mind the dropping of the units radian, idk why tbh)
