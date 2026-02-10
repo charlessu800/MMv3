@@ -88,10 +88,10 @@ Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into y
 ### Using the VSCode serial tools Extension
 In VSCode navigate to your extensions, download the serial monitor extension
 1. Navigate to the extension  
-   <img width="200px", height="auto"  src="imgs/sanity/extension_finder.png"/>
+   <img width="200px" height="auto"  src="imgs/sanity/extension_finder.png"/>
 
 3. Download the extension finder  
-   <img width="200px", height="auto" src="imgs/sanity/serial_monitor_install.png"/>
+   <img width="200px" height="auto" src="imgs/sanity/serial_monitor_install.png"/>
 
 5. Start monitoring  
    <img width="200px", height="auto" src="imgs/sanity/startMonitoring.png"/>
