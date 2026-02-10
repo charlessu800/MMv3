@@ -88,11 +88,11 @@ Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into y
 ### Using the VSCode serial tools Extension
 In VSCode navigate to your extensions, download the serial monitor extension
 1. Navigate to the extension  
-   ![navigate to extension](imgs/sanity/extension_finder.png)
+   <img height="200px" src="imgs/sanity/extension_finder.png"/>
 
-2. Download the extension finder  
-   ![download the extension finder](imgs/sanity/serial_monitor_install.png)
+3. Download the extension finder  
+   <img height="200px" src="imgs/sanity/serial_monitor_install.png"/>
 
-3. Start monitoring  
-   ![startMonitoring](imgs/sanity/startMonitoring.png)
+5. Start monitoring  
+   <img height="200px" src="imgs/sanity/startMonitoring.png"/>
 [TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor. Also add more photos!]
