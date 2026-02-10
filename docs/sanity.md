@@ -85,6 +85,14 @@ Copy the contents of this [`sanity/code.py`](../labs/sanity/code.py) file into y
 6. Follow the instructions printed in the serial monitor. You may have to press CTRL-C and CTRL-D to reset if you don't see anything.
     * IR sensor readings should be around 30,000-60,000 without a surface in front of them and under 5,000 with your hand right in front of them. Speak to a staff member if you need help with this part of the lab!
     * Spin the wheels manually, Encoders should be \~217 ticks per revolution, use the divot in the wheel as a guide :).
+### Using the VSCode serial tools Extension
+In VSCode navigate to your extensions, download the serial monitor extension
+1. Navigate to the extension  
+   ![navigate to extension](imgs/sanity/extension_finder.png)
 
+2. Download the extension finder  
+   ![download the extension finder](imgs/sanity/serial_monitor_install.png)
 
+3. Start monitoring  
+   ![startMonitoring](imgs/sanity/startMonitoring.png)
 [TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor. Also add more photos!]
