@@ -93,6 +93,6 @@ In VSCode navigate to your extensions, download the serial monitor extension
 3. Download the extension finder  
    <img width="800px" height="auto" src="imgs/sanity/serial_monitor_install.png"/>
 
-5. Start monitoring  
+5. Stop / Start monitoring  
    <img width="800px" height="auto" src="imgs/sanity/startMonitoring.png"/>
 [TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor. Also add more photos!]
