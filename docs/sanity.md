@@ -95,4 +95,8 @@ In VSCode navigate to your extensions, download the serial monitor extension
 
 5. Stop / Start monitoring  
    <img width="800px" height="auto" src="imgs/sanity/startMonitoring.png"/>
+
+Use CTRL-c to manually interupt the program, or CTRL-D
+
+   
 [TODO: update the following below to include circuitpython . org and vscode with serial monitor extension! For both mac/linux/windows etc! and also include the mu text editor. Also add more photos!]
