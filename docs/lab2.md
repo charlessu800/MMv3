@@ -155,7 +155,7 @@ Next solder first the J2, J5 (Receptacle Connector 0.100" (2.54mm) Through Hole 
 </b></a>
 </p>
 
-Now let's solder the J1 (Keystone_593_594 Battery Contact Snaps) connectors. When soldering these connectors it is advised to take the two Battery Contact Snaps, positive and negative, and attach them to a 9V battery first before placing them on the board. See the images below. This is to make sure that when you solder them onto the board they are aligned. You can solder the Battery Contact Snaps while the 9V battery is still connected to them.
+Now let's solder the J1 (Keystone_593_594 Battery Contact Snaps) connectors. When soldering these connectors it is advised to take the two Battery Contact Snaps, positive and negative, and attach them to a 9V battery first before placing them on the board. See the images below. This is to make sure that when you solder them onto the board they are aligned. You can solder the Battery Contact Snaps while the 9V battery is still connected to them. (In these photos the directionality of the motor contorller unit is facing the wrong way, the point where you bridge the pads should be closer to the left side.) 
 
 <p align="center">
     <img height="250px" src="imgs/lab2/use_battery_align.jpg"/>
